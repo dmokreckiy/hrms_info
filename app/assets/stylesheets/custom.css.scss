@@ -1,0 +1,104 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 150px;
+  padding-left: 50px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {                   
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  margin-left: 170px;
+  text-align: left;
+  font-weight: normal;
+  
+}
+
+
+/* header */
+
+#logo {                          /*Sass*/
+  float: left;
+  margin-left: -120px;
+  padding-right: 17px;
+  font-size: 2.0em;
+  color: #C0C0C0;
+  letter-spacing: -1px;
+  padding-top: 15px;
+  font-weight: bold;
+  line-height: 2;
+  &:hover {                               
+    color: #FFFFFF; 
+    text-decoration: none;
+  }
+}
+
+
+#id1 {
+   
+   letter-spacing: -1px;
+   line-height: 1;
+   text-decoration: none;
+   outline-color: #FFFFFF; 
+   ul {
+    color: #C0C0C0;
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+
+}
+
+
+footer {
+  margin-top: 150px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+ 
+  small {
+    float: right;
+    margin-right: 20px;
+  }
+}
+
