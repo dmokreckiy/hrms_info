@@ -46,19 +46,12 @@ textarea {
 
 
 h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-  margin-left: 170px;
-  text-align: left;
-  font-weight: normal;
-  
+  margin-left: 150px;
 }
-
 
 /* header */
 
-#logo {                          /*Sass*/
+#logo {                         
   float: left;
   margin-left: -120px;
   padding-right: 17px;
@@ -75,19 +68,7 @@ h2 {
 }
 
 
-#id1 {
-   
-   letter-spacing: -1px;
-   line-height: 1;
-   text-decoration: none;
-   outline-color: #FFFFFF; 
-   ul {
-    color: #C0C0C0;
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
 
-}
 
 
 footer {
@@ -102,3 +83,14 @@ footer {
   }
 }
 
+
+table {
+  margin-left: 150px
+}
+
+#my_element {
+
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 50px;
+}
