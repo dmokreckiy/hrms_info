@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-OracleOracle::Application.configure do
-=======
+
 AppProject::Application.configure do
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

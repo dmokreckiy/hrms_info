@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-OracleOracle::Application.routes.draw do
-  resources :posts
 
-=======
 AppProject::Application.routes.draw do
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
+
   # root 'welcome#index'
 
-=======
+
   root 'pages#index'
    resources :pages
    
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

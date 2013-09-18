@@ -24,11 +24,10 @@ test:
   username: oracle
   password: rubypvt
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
+
+
 production:
   development:
   adapter: oracle_enhanced
@@ -36,9 +35,4 @@ production:
   port: 1521
   database: xe
   username: oracle
-<<<<<<< HEAD
   password: rubypvt
-
-=======
-  password: rubypvt
->>>>>>> cce675033951772fde229148295f62f178cbf3ad

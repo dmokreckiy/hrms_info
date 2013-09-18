@@ -11,17 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20130913110913) do
-=======
-ActiveRecord::Schema.define(version: 20130918065851) do
+ActiveRecord::Schema.define(version: 20130918185216) do
 
   create_table "carts", force: true do |t|
     t.integer  "user_id",    precision: 38, scale: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
 
   create_table "items", force: true do |t|
     t.integer  "price",       precision: 38, scale: 0
@@ -34,8 +30,6 @@ ActiveRecord::Schema.define(version: 20130918065851) do
     t.integer  "votes_count", precision: 38, scale: 0, default: 0
   end
 
-<<<<<<< HEAD
-=======
   create_table "pages", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -43,7 +37,6 @@ ActiveRecord::Schema.define(version: 20130918065851) do
     t.datetime "updated_at"
   end
 
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -51,13 +44,10 @@ ActiveRecord::Schema.define(version: 20130918065851) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
   create_table "users", force: true do |t|
     t.string   "login"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
 end

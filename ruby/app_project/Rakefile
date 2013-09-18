@@ -3,8 +3,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-<<<<<<< HEAD
-OracleOracle::Application.load_tasks
-=======
 AppProject::Application.load_tasks
->>>>>>> cce675033951772fde229148295f62f178cbf3ad
+
