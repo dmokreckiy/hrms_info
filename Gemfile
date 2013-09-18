@@ -31,10 +31,18 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 gem 'protected_attributes'
+
 group :development do
     gem 'capistrano'
 end
+
+group :test do
+  gem 'capybara'
+end
+gem 'rspec-rails'
+
 gem 'faker'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
