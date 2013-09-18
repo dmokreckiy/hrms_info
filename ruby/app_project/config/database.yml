@@ -1,0 +1,44 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+development:
+  development:
+  adapter: oracle_enhanced
+  host: 178.159.246.87
+  port: 1521
+  database: xe
+  username: oracle
+  password: rubypvt
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  development:
+  adapter: oracle_enhanced
+  host: 178.159.246.87
+  port: 1521
+  database: xe
+  username: oracle
+  password: rubypvt
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cce675033951772fde229148295f62f178cbf3ad
+production:
+  development:
+  adapter: oracle_enhanced
+  host: 178.159.246.87
+  port: 1521
+  database: xe
+  username: oracle
+<<<<<<< HEAD
+  password: rubypvt
+
+=======
+  password: rubypvt
+>>>>>>> cce675033951772fde229148295f62f178cbf3ad

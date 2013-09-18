@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<<<<<<< HEAD
+  <title>ProjectApp</title>
+=======
+<<<<<<< HEAD
+  <title>OracleOracle</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+=======
+  <title>TestApp</title>
+>>>>>>> c95228cbaabece975348eab4ed81cc9971ae2586
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<%= render 'layouts/header' %>
+
+
+<%= yield %>
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
+>>>>>>> cce675033951772fde229148295f62f178cbf3ad
+</body>
+</html>
