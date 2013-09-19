@@ -19,10 +19,14 @@
 <% end %>
 
 </table>
-<div class="my_class" id="my_element">
-<%= will_paginate %>
+<!-- <div class="my_class" id="my_element">
+<%= will_paginate @pages,  :first_page => "first" %>
 </div>
 
+ -->
 
+<div class="pag" id="my_element">
 
+<%= paginate @pages %>
 
+</div>

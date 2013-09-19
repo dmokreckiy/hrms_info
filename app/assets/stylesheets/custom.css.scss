@@ -89,8 +89,13 @@ table {
 }
 
 #my_element {
-
-  margin-left: 400px;
-  margin-right: 400px;
+  font-size: 1.0em;
+  margin-left: 250px;
   margin-top: 50px;
+  padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
 }
+
+

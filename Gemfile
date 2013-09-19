@@ -56,4 +56,5 @@ gem 'bootstrap-will_paginate', '0.0.6'
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+#gem 'debugger', group: [:development, :test]
+gem 'kaminari' 
