@@ -1,4 +1,19 @@
 <h2> Pages:List</h2>
+
+<div class="navbar" >
+	<nav class="navbar-inner">
+		<ul class="nav">
+			<li><%= link_to "New page", new_page_path, class: "proceed_button" %></li>
+			<li><%= link_to "View", page_path(:id), class: "proceed_button" %></li>
+			<li><%= link_to "Edit content", edit_page_path(:id), class: "proceed_button" %></li>
+			<li><%= link_to "Delete", page_path(:id), :method => :delete,  class: "proceed_button" %></li>
+		</ul>
+		<form class="seach" text-align="center">
+		  <input  class="form" id="focusedInput"  value="Search">
+		<form>
+	</nav>
+</div>
+
 <table width="70%" border="2" cellspacing="0" cellpadding="3" background="#c0c0c0">
 	
 	<tr align= "left">
