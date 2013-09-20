@@ -58,4 +58,9 @@ gem 'bootstrap-will_paginate', '0.0.6'
 group :development, :test do
   gem 'debugger'
 end
+=======
+
 gem 'kaminari' 
+group :development, :test do
+  gem 'debugger'
+end
