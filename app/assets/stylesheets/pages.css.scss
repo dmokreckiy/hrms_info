@@ -35,7 +35,17 @@
 	display: table-cell;
 	padding: 0px 50px 0px;
 	float: left; /* Обтекание по правому краю */
-  width: 20%
+  width: 15%
+
+}
+  
+  
+.sidebar > ul {
+	margin: 0;
+	padding: 3px;
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	list-style: none;
 }
 
 .sidebar li {
@@ -45,10 +55,15 @@
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin: 0 0 3px 0;
-	width: 80%;
-	text-align: left;
+	text-align: center;
+	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
 	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
 }
+
+
 
 .list {
 
