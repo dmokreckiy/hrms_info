@@ -6,6 +6,7 @@ end
 
 def create
 	@page = Page.new(params[:page])
+	render 'new'
 end
 
 def new
