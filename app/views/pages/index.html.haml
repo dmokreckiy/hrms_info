@@ -1,13 +1,14 @@
-%h2 Pages:List
-
 .navbar
 	.navbar-inner
-		%ul.nav
-			%li= link_to "New page", new_page_path, class: "proceed_button"
-			%li= link_to "View", page_path(:id), class: "proceed_button"
-			%li= link_to "Edit content", edit_page_path(:id), class: "proceed_button"
-			%li= link_to "Delete", page_path(:id), :method => :delete,  class: "proceed_button"	
-%section
+		.action-bar
+			.action-buttons
+				%ul.nav
+					%li= button_to "New page", new_page_path, class: "btn btn-success"
+					%li= button_to "View", page_path(:id), class: "btn btn-success"
+					%li= button_to "Edit content", edit_page_path(:id), class: "btn btn-success"
+					%li= button_to "Delete", page_path(:id), :method => :delete,  class: "btn btn-success"
+			%input#filter{class: "filter search-query", type: "text", placeholder: "Search"}
+	%section
 	%nav.sidebar
 		%ul#navigation
 			%li= link_to "Pages", root_path, {class: "sidebar-icon"}
@@ -30,6 +31,7 @@
 				%td{width: "50%", align: "center"}= i.title 
 				%td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
 				%td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
+	%br
 		
 
 

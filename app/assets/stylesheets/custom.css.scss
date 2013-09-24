@@ -72,8 +72,9 @@ h2 {
 
 
 footer {
-  margin-top: 150px;
-  padding-top: 5px;
+  position: absolute;  
+  bottom: 0;  
+  height: 80px;
   border-top: 1px solid #eaeaea;
   color: #999;
  
