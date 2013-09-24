@@ -1,0 +1,40 @@
+%h2 Pages:List
+
+.navbar
+	.navbar-inner
+		%ul.nav
+			%li= link_to "New page", new_page_path, class: "proceed_button"
+			%li= link_to "View", page_path(:id), class: "proceed_button"
+			%li= link_to "Edit content", edit_page_path(:id), class: "proceed_button"
+			%li= link_to "Delete", page_path(:id), :method => :delete,  class: "proceed_button"	
+%section
+	%nav.sidebar
+		%ul#navigation
+			%li= link_to "Pages", root_path, {class: "sidebar-icon"}
+			%li= link_to "Templates", '#', {class: "sidebar-icon"}
+			%li= link_to "Files",  '#', {class: "sidebar-icon"}
+			%li= link_to "Galleries", '#', {class: "sidebar-icon"}	          
+			%li= link_to "Styles", '#', {class: "sidebar-icon"}
+			%li= link_to "Components", '#', {class: "sidebar-icon"}
+	.list
+		%table.for_tab
+			%tr
+			%th Title
+			%th Published
+			%th Last changed
+			
+		
+			- @pages.each do |i|
+			
+				%tr
+				%td{width: "50%", align: "center"}= i.title 
+				%td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
+				%td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
+		
+
+
+
+
+
+
+

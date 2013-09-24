@@ -1,0 +1,19 @@
+%html
+%head
+  %title TestApp
+  = stylesheet_link_tag :application, media: "all", "data-turbolinks-track" => true
+  = javascript_include_tag :application, "data-turbolinks-track" => true
+  = csrf_meta_tags  
+  .header-bottom
+    .header-image
+      %img{src: "/images/companyLogo.png"} 
+	  
+%body
+  = render 'layouts/header'
+
+
+  = yield
+  = render 'layouts/footer'
+  = debug(params) if Rails.env.development?
+
+

@@ -6,6 +6,7 @@ gem 'ruby-oci8'
 gem 'activerecord-oracle_enhanced-adapter', git: 'https://github.com/yahonda/oracle-enhanced.git', branch: 'support_schema_creation_rails4'
 # Use sqlite3 as the database for Active Record
 
+gem 'haml-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -42,6 +43,7 @@ group :test do
   gem 'capybara'
 end
 gem 'rspec-rails'
+
 
 gem 'faker'
 gem 'will_paginate', '3.0.3'
