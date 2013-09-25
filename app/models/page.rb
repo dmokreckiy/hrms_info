@@ -1,5 +1,7 @@
 class Page < ActiveRecord::Base
-	attr_accessible :title, :body
-	validates :title, presence: true
-	validates :body, presence: true
+
+validates :page_title, presence: true
+validates :page_url, presence: true
+validates :description, length: { maximum: 200 }
+
 end

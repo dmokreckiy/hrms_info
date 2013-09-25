@@ -11,10 +11,11 @@
 	<% @pages.each do |i| %>
 	
 	<tr align="left" valign= "">
-		<td width ="50%"><%= i.title %> </td>
-		<td width ="20%" align="center"><%= check_box_tag :publsihed, true, false %></td>
+		<td width ="50%"><%= i.page_title %> </td>
+		<td width ="20%" align="center"><%= check_box_tag :published, true, false %></td>
 		<td width ="30%"><%= i.updated_at.strftime("%d/%m/%y %l:%M %p")  %> </td>
 	</tr>
+
 
 <% end %>
 

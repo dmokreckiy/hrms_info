@@ -36,11 +36,14 @@ gem 'protected_attributes'
 
 group :development do
     gem 'capistrano'
+    gem 'sqlite3', '1.3.7'
 end
 
 group :test do
   gem 'capybara'
+  gem 'sqlite3', '1.3.7'
 end
+
 gem 'rspec-rails'
 
 gem 'faker'
@@ -56,4 +59,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+#gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
+gem 'rb-readline'
+gem "annotate", "~> 2.5.0"
