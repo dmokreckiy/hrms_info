@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 gem 'ruby-oci8'
 gem 'activerecord-oracle_enhanced-adapter', git: 'https://github.com/yahonda/oracle-enhanced.git', branch: 'support_schema_creation_rails4'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3'
 gem 'haml-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

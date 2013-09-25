@@ -4,13 +4,17 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  development:
-  adapter: oracle_enhanced
-  host: 178.159.246.87
-  port: 1521
-  database: xe
-  username: oracle
-  password: rubypvt
+  #dapter: oracle_enhanced
+  #ost: 178.159.246.87
+  #ort: 1521
+  #atabase: xe
+  #sername: oracle
+  #assword: rubypvt
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
