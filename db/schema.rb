@@ -11,43 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130918065851) do
-
-  create_table "carts", force: true do |t|
-    t.integer  "user_id",    precision: 38, scale: 0
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-  end
-
-  create_table "items", force: true do |t|
-    t.decimal  "price"
-    t.string   "name"
-    t.boolean  "real",        precision: 1,  scale: 0
-    t.decimal  "weight"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.string   "description"
-    t.integer  "votes_count", precision: 38, scale: 0, default: 0
-  end
+ActiveRecord::Schema.define(version: 20130925094004) do
 
   create_table "pages", force: true do |t|
-    t.string   "title"
-    t.text     "body"
+    t.string   "page_title"
+    t.string   "page_url"
+    t.text     "keywords"
+    t.text     "description"
+    t.text     "content"
+    t.integer  "parent_page_id",      precision: 38, scale: 0
+    t.integer  "page_type_id",        precision: 38, scale: 0
+    t.boolean  "display_top_menu",    precision: 1,  scale: 0
+    t.boolean  "display_bottom_menu", precision: 1,  scale: 0
+    t.boolean  "published",           precision: 1,  scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
