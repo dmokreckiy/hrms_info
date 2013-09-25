@@ -18,7 +18,7 @@
                 - @pages.each do |i|
                         
                         %tr
-                        %td{width: "50%", align: "center"}= i.title 
+                        %td{width: "50%", align: "center"}= i.page_title 
                         %td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
                         %td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
                 

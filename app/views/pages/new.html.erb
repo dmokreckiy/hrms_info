@@ -2,9 +2,10 @@
 <%= render 'layouts/navbar' %>
 <%= form_for(@page) do |f| %>
 
-<div class="button_create_page">
-  <%= f.submit "Create page", class: "btn btn-large btn-primary", float: "right" %>
-</div>
+  <div class="btn-group ">   
+    <%= f.submit "Create page", class: "btn ", float: "right" %>
+    <%= f.button "Cancel",type: :cancel,  class: "btn", float: "right" %>
+  </div>
 
 <div class="tabbable" id = "tabbable"> 
   <ul class="nav nav-tabs">
@@ -40,18 +41,27 @@
 
       		<div class="parent_page">
       			<div class="parent_page-label"><%= f.label :parent_page_id %> </div>
-      			<select class="parent_page-select">
-  						<option>None</option>
-  						<option>Yes</option>
-						</select>
+      			<%= f.select(:parent_page_id, options_for_select(['None'])) %>
       		</div>
 
       		<div class="page_type">
-      			<div class="page_type-label"><%= f.label :page_type_id %> </div>
-      			<select class="page_type-select">
-  						<option>None</option>
-						</select>
+      			<div class="page_type-label"><%= f.label :page_type %> </div>
+      			<%= f.select(:page_type, options_for_select(['None', 'Text'])) %>
       		</div>
+
+          <div class="display_at_the_menu">
+            <div class="display_at_the_menu-label"><%= f.label("Display at the menu") %></div>
+            <div class="checkbox_menu"><%= f.check_box(:display_top_menu) %><%= f.label("Top menu") %>
+              <%= f.check_box(:display_bottom_menu) %><%= f.label("Bottom menu") %>
+            </div>
+          </div>
+
+          <div class="published">
+            <div class="published-label"><%= f.label("Published") %>
+            <div class="published-checkbox"><%= f.check_box(:published) %> 
+          </div>
+
+        
 
     		<% end %>
 

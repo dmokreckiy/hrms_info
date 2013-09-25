@@ -186,16 +186,32 @@ table {
 
 }
 
+
+/* display at the menu */
+.display_at_the_menu {
+  margin-top: 50px;
+}
+
+
+/*published*/
+.published {
+  margin-top: 50px;
+}
+.published-label {
+  float: left;
+}
+
+
+
 .tabbable {
   margin-left: 150px;
   margin-right: 100px;
 }
 
 
-.button_create_page {
+.btn-group {
   margin-top: -50px;
   margin-bottom: 50px;
   margin-right: 150px;
   float: right;
 }
-

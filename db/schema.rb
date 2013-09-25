@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130925094004) do
+ActiveRecord::Schema.define(version: 20130925160724) do
 
   create_table "pages", force: true do |t|
     t.string   "page_title"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20130925094004) do
     t.text     "description"
     t.text     "content"
     t.integer  "parent_page_id",      precision: 38, scale: 0
-    t.integer  "page_type_id",        precision: 38, scale: 0
+    t.integer  "page_type",           precision: 38, scale: 0
     t.boolean  "display_top_menu",    precision: 1,  scale: 0
     t.boolean  "display_bottom_menu", precision: 1,  scale: 0
     t.boolean  "published",           precision: 1,  scale: 0
