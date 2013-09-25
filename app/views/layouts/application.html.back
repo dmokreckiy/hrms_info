@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestApp</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <div class="header-bottom">
+	<div class="header-image">
+	  <a href="/rms-info" alt="Logo"><img src="/images/companyLogo.png" alt="logo"></a>
+	</div>
+  </div>  
+</head>
+<body>
+<%= render 'layouts/header' %>
+
+
+<%= yield %>
+<%= render 'layouts/footer' %>
+<%= debug(params) if Rails.env.development? %>
+</body>
+</html>

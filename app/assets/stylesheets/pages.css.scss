@@ -4,7 +4,7 @@
 
 .action-bar {
     height: auto !important;
-    padding: 0px 40em;
+    padding: 0px 140px;
     display: inline-block;
 }
 
@@ -34,16 +34,23 @@
 	  
 	  margin: 0px 10px; 
 
-	}
-
-	li {
-    line-height: 10px;
 }
+
+#buttons {
+	margin-top: 8px;
+	margin-left: 10px;	
+}
+
 
 li {
     line-height: 10px;
 }
-	
+
+#filter_search {
+	type: "text";
+	placeholder: "Search";
+	margin: 10px;
+}
 	.search {
 	 	margin: 15px 0px 10px;
 	}
