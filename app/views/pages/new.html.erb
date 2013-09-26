@@ -1,10 +1,12 @@
-<h2> Pages: create a new page</h2>
+<h2>Create a new page</h2>
 <%= render 'layouts/navbar' %>
-<%= form_for(@page) do |f| %>
+<%= form_for(@page)  do |f| %>
 
   <div  class = "buttons">   
-    <%= f.submit "Create page", class: "btn ", float: "right" %>
-  <a href="/pages"  <%= f.button "Cancel",  class: "btn", float: "right" %></a>
+    <%= f.submit "Save page", class: "btn btn-success", float: "right" %>
+    <a href="#"  <%= f.button "View",  class: "btn btn-success", float: "right" %></a>
+    <a href="#"  <%= f.button "Apply",  class: "btn btn-success", float: "right" %></a>
+    <a href="/pages"  <%= f.button "Cancel",  class: "btn btn-success", float: "right" %></a>
   </div> 
 
 
@@ -48,7 +50,7 @@
 
       		<div class="page_type">
       			<div class="page_type-label"><%= f.label :page_type %> </div>
-      			<%= f.select(:page_type, options_for_select(['None', 'Text'])) %>
+      			<%= f.select(:page_type, options_for_select(['None'])) %>
       		</div>
 
           <div class="display_at_the_menu">
@@ -65,14 +67,13 @@
 
         
 
-    		<% end %>
-
     	</div>
     	</div>
    	</div>
 
-    	<div class="tab-pane active" id="tab2">
+    	<div class="tab-pane" id="tab2">
     	</div>
   	
   	</div>
 	</div>
+<% end %>

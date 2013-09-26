@@ -41,7 +41,7 @@ textarea {
 
 
 h2 {
-  margin-left: 150px;
+  margin-left: 200px;
 }
 
 /* header */
@@ -79,13 +79,20 @@ footer {
 
 
 table {
-  margin-left: 200px;
-  margin-top: -100px;
-  padding: 5px; 
-  width: 70%; 
-  float: left;
+  width: 60%;
+  border: 1px solid black;
+  cellspacing: 0;
+  cellpadding: 3;
+  border-collapse: collapse;
+  margin-left: 300px;
+  margin-top: -50px;
+    th { 
+    text-align: left;
+    background: #ccc;
+    padding: 5px; 
+    border: 1px solid black;
+  }
 }
-
 #pagination {
 
   margin-left: 400px;
@@ -113,7 +120,7 @@ table {
 }
 
 .title-field input {
-  width: 60%;    
+  width: 58%;    
 }
 
 
@@ -204,7 +211,7 @@ table {
 
 
 .tabbable {
-  margin-left: 150px;
+  margin-left: 200px;
   margin-right: 100px;
 }
 
@@ -212,6 +219,6 @@ table {
 .buttons {
   margin-top: -50px;
   margin-bottom: 50px;
-  margin-right: 150px;
+  margin-right: 100px;
   float: right;
 }

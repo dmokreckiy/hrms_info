@@ -8,17 +8,16 @@
                         %li= link_to "Delete", page_path(:id), :method => :delete,  class: "proceed_button"     
 %section
         = render 'layouts/navbar'
-        %table.for_tab{background: "#c0c0c0", border: "2", cellpadding: "3", cellspacing: "0", width: "60%"}
+        %table.for_tab{background: "#c0c0c0", border: "1", cellpadding: "2", cellspacing: "2", width: "100%"}
                 %tr
                 %th Title
-                %th Published
+                %th Published 
                 %th Last changed
                         
-                
                 - @pages.each do |i|
                         
                         %tr
-                        %td{width: "50%", align: "center"}= i.page_title 
+                        %td{width: "40%", align: "center"}= i.page_title 
                         %td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
                         %td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
                 
