@@ -10,48 +10,47 @@
   </div> 
 
 
-
 <div class="tabbable" id = "tabbable"> 
   <ul class="nav nav-tabs">
     <li class = "active"><a href="/pages/new" data-toggle="tab">Pages</a></li>
     <li><a href="/pages/new/#" data-toggle="tab">Content</a></li>
   </ul>
-  	<div class="tab-content">
+    <div class="tab-content">
       <div class="tab-pane active" id="tab1">
-  		
-  		<div class="row">
-  			<div class="span6 offset3" >
+      
+      <div class="row">
+        <div class="span6 offset3" >
 
-    			<div class="title">
-      			<div class="title-label"> <%= f.label :page_title %> </div>
-      			<div class="title-field"> <%= f.text_field :page_title %> </div>
-      		</div>
-      	
-      		<div class="page_url">
-      			<div class="page_url-label"><%= f.label :page_url %></div>
-      			<div class="page_url-field"><%= f.text_field :page_url %></div>	
-      		</div>
+          <div class="title">
+            <div class="title-label"> <%= f.label :page_title %> </div>
+            <div class="title-field"> <%= f.text_field :page_title %> </div>
+          </div>
+        
+          <div class="page_url">
+            <div class="page_url-label"><%= f.label :page_url %></div>
+            <div class="page_url-field"><%= f.text_field :page_url %></div> 
+          </div>
 
-      		<div class="keywords">
-      			<div class="keywords-label"><%= f.label :keywords %></div>
-      			<div class="keywords-field"><%= f.text_field :keywords %></div>
-      		</div>
+          <div class="keywords">
+            <div class="keywords-label"><%= f.label :keywords %></div>
+            <div class="keywords-field"><%= f.text_field :keywords %></div>
+          </div>
 
-      		<div class="description">
-      			<div class="description-label"><%= f.label :description %></div>
-      			<div class="description-field"><%= f.text_area :description %></div>
-      		</div>
+          <div class="description">
+            <div class="description-label"><%= f.label :description %></div>
+            <div class="description-field"><%= f.text_area :description %></div>
+          </div>
 
 
-      		<div class="parent_page">
-      			<div class="parent_page-label"><%= f.label :parent_page_id %> </div>
-      			<%= f.select(:parent_page_id, options_for_select(['None'])) %>
-      		</div>
+          <div class="parent_page">
+            <div class="parent_page-label"><%= f.label :parent_page_id %> </div>
+            <%= f.select(:parent_page_id, options_for_select(['None'])) %>
+          </div>
 
-      		<div class="page_type">
-      			<div class="page_type-label"><%= f.label :page_type %> </div>
-      			<%= f.select(:page_type, options_for_select(['None'])) %>
-      		</div>
+          <div class="page_type">
+            <div class="page_type-label"><%= f.label :page_type %> </div>
+            <%= f.select(:page_type, options_for_select(['None'])) %>
+          </div>
 
           <div class="display_at_the_menu">
             <div class="display_at_the_menu-label"><%= f.label("Display at the menu") %></div>
@@ -68,13 +67,13 @@
 
         
 
-    	</div>
-    	</div>
-   	</div>
+      </div>
+      </div>
+    </div>
 
-    	<div class="tab-pane" id="tab2">
-    	</div>
-  	
-  	</div>
-	</div>
+      <div class="tab-pane" id="tab2">
+      </div>
+    
+    </div>
+  </div>
 <% end %>

@@ -2,15 +2,14 @@ class PagesController < ApplicationController
 
 
 def index
-	# @pages = Page.paginate(page: params[:page],:per_page => 20)
-	@pages = Page.all
+	@pages = Page.paginate(page: params[:page],:per_page => 20)
 	@pages.sort_by!{ |p| p.created_at }
 end
 
 def create
 	@page = Page.new(params[:page])
 	  if @page.save
-	  	flash[:success] = "Page:#{@page.page_title} was created!" 
+	  	flash[:success] = "The #{@page.page_title} has been saved" 
 	  	redirect_to pages_path
 	  else
 	  	render 'new'
@@ -33,9 +32,4 @@ end
 
 end
 
-	# private
-	# 	def check_for_cancel
- #  		if Page.new(params[:page]) == "Cancel"
- #    	redirect_to pages_path
- #  		end
-	# 	end
+	
