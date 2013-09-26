@@ -1,3 +1,65 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  width: 60%;
+  border: 1px solid black;
+  cellspacing: 0;
+  cellpadding: 3;
+  border-collapse: collapse;
+  margin-left: 300px;
+  margin-top: -70px;
+    th { 
+    text-align: left;
+    background: #ccc;
+    padding: 5px; 
+    border: 1px solid black;
+  }
+}
+
+.action-bar {
+	float:right;
+    height: auto !important;
+    padding: 0px 140px;
+    display: inline-block;
+}
+
+#filter_search {
+        type: "text";
+        placeholder: "Search";
+        margin: 10px;
+}
+        .search {
+                margin: 15px 0px 10px;
+        }
+
+.action-buttons button {
+    min-width: 115px;
+    margin-right: -150;
+  }
+
+  .proceed_button {
+
+          background-color: #33CC66; 
+          padding: 2px 4px;
+          font: 18px sans-serif;
+          text-decoration: none;
+          border-radius: 5px;
+          -moz-border-radius: 5px; 
+          -webkit-border-radius: 5px;
+         
+          color: #000;
+          
+          margin: 0px 10px; 
+
+}
+
+#buttons {
+		float:right;
+        margin-top: 8px;
+        margin-left: 10px;      
+}
+
+
+
+
