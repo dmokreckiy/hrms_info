@@ -3,10 +3,10 @@
 <%= form_for(@page)  do |f| %>
 
   <div  class = "buttons">   
-    <%= f.submit "Save page", class: "btn btn-success", float: "right" %>
+    <%= f.submit "Save page", class: "btn btn-success", float: "right"%>
     <a href="#"  <%= f.button "View",  class: "btn btn-success", float: "right" %></a>
     <a href="#"  <%= f.button "Apply",  class: "btn btn-success", float: "right" %></a>
-    <a href="/pages"  <%= f.button "Cancel",  class: "btn btn-success", float: "right" %></a>
+    <a href="/pages"  <%= f.button "Cancel",  class: "btn btn-success", float: "right", data: { confirm: "Are you sure?" } %></a>
   </div> 
 
 
@@ -55,14 +55,15 @@
 
           <div class="display_at_the_menu">
             <div class="display_at_the_menu-label"><%= f.label("Display at the menu") %></div>
-            <div class="checkbox_menu"><%= f.check_box(:display_top_menu) %><%= f.label("Top menu") %>
-              <%= f.check_box(:display_bottom_menu) %><%= f.label("Bottom menu") %>
-            </div>
+            <div class="topmenu-label" align="center" ><%= f.label("Top menu") %></div>
+            <div class="checkbox_top" align="center"><%= f.check_box(:display_top_menu) %></div>
+            <div class="botmenu-label" align="center"><%= f.label("Bottom menu")%></div>
+            <div class="checkbox-bot" align="center"><%= f.check_box(:display_bottom_menu) %></div>
           </div>
 
           <div class="published">
-            <div class="published-label"><%= f.label("Published") %>
-            <div class="published-checkbox"><%= f.check_box(:published) %> 
+            <div class="published-label" align ="right"><%= f.label("Published") %>
+            <div class="published-checkbox" align ="center"><%= f.check_box(:published) %> 
           </div>
 
         
