@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'ruby-oci8'
 gem 'activerecord-oracle_enhanced-adapter', git: 'https://github.com/yahonda/oracle-enhanced.git', branch: 'support_schema_creation_rails4'
+gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -20,11 +21,11 @@ group :doc do
 end
 
 group :development, :test do
-	gem 'sqlite3', ">= 1.3.8"
-	gem 'byebug'
-	gem 'rb-readline'
-	gem "annotate", "~> 2.5.0"
-	gem 'faker'
+  gem 'sqlite3', ">= 1.3.8"
+  gem 'byebug'
+  gem 'rb-readline'
+  gem "annotate", "~> 2.5.0"
+  gem 'faker'
 end
 
 group :development do
