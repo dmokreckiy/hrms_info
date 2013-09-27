@@ -7,14 +7,17 @@ table {
   cellspacing: 0;
   cellpadding: 3;
   border-collapse: collapse;
-  margin-left: 300px;
-  margin-top: -70px;
-    th { 
-    text-align: left;
+  th { 
+    text-align: center;
     background: #ccc;
     padding: 5px; 
     border: 1px solid black;
   }
+  
+  td { 
+    padding: 5px;
+    border: 1px solid black;
+   }
 }
 
 .action-bar {
@@ -60,6 +63,38 @@ table {
         margin-left: 10px;      
 }
 
+.sidebar {
+  width: 290px;
+  display: table-cell;
+  padding: 0px 50px 0px;
+  float: left; /* Обтекание по правому краю */
+  width: 15%
+
+}
+  
+  
+.sidebar > ul {
+  margin: 0;
+  padding: 3px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.sidebar li {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 0 3px 0;
+  text-align: center;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+}
 
 
 
