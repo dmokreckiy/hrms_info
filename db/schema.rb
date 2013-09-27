@@ -13,7 +13,4 @@
 
 ActiveRecord::Schema.define(version: 20130925132146) do
 
-# Could not dump table "pages" because of following NoMethodError
-#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0xbb1385d8>
-
 end
