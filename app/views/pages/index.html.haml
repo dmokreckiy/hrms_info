@@ -12,6 +12,7 @@
   = render 'layouts/navbar'
   %table
     %tr
+    %th= check_box_tag :true, false
     %th Title
     %th Published 
     %th Last changed
@@ -19,6 +20,9 @@
     - @pages.each do |i|
                         
       %tr
+      %td{width: "10%", align: "center"}= check_box_tag :page
       %td{width: "40%", align: "center"}= i.page_title 
       %td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
       %td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
+  #pagination
+    = paginate @pages, left: 2, right: 2

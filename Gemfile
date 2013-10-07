@@ -13,8 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'protected_attributes'
 gem 'rspec-rails'
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.6'
+
 
 group :doc do
   gem 'sdoc', require: false
@@ -23,7 +22,6 @@ end
 group :development, :test do
   gem 'sqlite3', ">= 1.3.8"
   gem 'byebug'
-  gem 'rb-readline'
   gem "annotate", "~> 2.5.0"
   gem 'faker'
 end
@@ -49,8 +47,6 @@ group :development, :test do
 end
 
 gem 'kaminari' 
-group :development, :test do
-  gem 'debugger'
-end
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]

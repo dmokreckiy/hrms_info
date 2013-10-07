@@ -2,8 +2,8 @@ class PagesController < ApplicationController
 
 
 def index
-	@pages = Page.paginate(page: params[:page],:per_page => 20)
-	@pages.sort_by!{ |p| p.created_at }
+	# @users = User.order(:name).page params[:page]
+	@pages = Page.page params[:page]
 end
 
 def create
