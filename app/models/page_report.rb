@@ -34,6 +34,6 @@ class PageReport
    # disabled? ? "Yes" : "No"
   #end
   column(:updated_at) do |record|
-    record.updated_at.to_date
+    record.updated_at.strftime("%d/%m/%y %l:%M %p")
   end
 end
