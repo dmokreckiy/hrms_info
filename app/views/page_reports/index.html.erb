@@ -6,6 +6,7 @@
 
   <div class='total'>Total: <%= @page_report.assets.count %></div>
   <%= datagrid_table(@page_report, @assets) %>
+  <%= will_paginate @assets %>
   
 </div>
 
