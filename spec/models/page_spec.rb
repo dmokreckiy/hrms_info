@@ -36,22 +36,15 @@ describe Page do
     it { should_not be_valid }
   end
 
-  # Expanded test with regards to Naming rules
-
   describe "when title format is invalid" do
     it "should not be valid" do
-      titles = %w[title/ За родину мать %^&*()]
+      titles = %w[title\ За родину мать %^&*()]
       titles.each do |invalid_titles|
         @page.page_title = invalid_titles
         expect(@page).not_to be_valid
       end
     end
   end
-
-  # describe "when page title consist of ineligible symbols" do
-  #   before { @page.page_title = '%^&*()' }
-  #   it { should_not be_valid }
-  # end
 
   describe "when page url is empty" do
     before { @page.page_url= ' ' }
@@ -76,5 +69,19 @@ describe Page do
     end
   end
 
+  describe "when page description contains whitespace" do
+    before { @page.page_title = "  yesterday all my \n troubles     seemed    so \t far away      " }
+    it "should clean description of whitespace" do
+      @page.run_callbacks(:after_save)
+      @page.description
+    end
+  end
+
+  describe "when page title doesn't contain any letters" do
+    before { @page.page_title = "12345" }
+    it { should_not be_valid }
+  end
+
+  #Here will be test for empty name field converting to "%Type of the object%N+1"
 
 end
