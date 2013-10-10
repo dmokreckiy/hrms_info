@@ -38,7 +38,7 @@ describe Page do
 
   describe "when title format is invalid" do
     it "should not be valid" do
-      titles = %w[title\ За родину мать %^&*()]
+      titles = %w[ti/tle За родину мать %^&*()]
       titles.each do |invalid_titles|
         @page.page_title = invalid_titles
         expect(@page).not_to be_valid
@@ -64,7 +64,7 @@ describe Page do
   describe "when page title contains whitespace" do
     before { @page.page_title = "  yesterday all my \n troubles     seemed    so \t far away      " }
     it "should clean title of whitespace" do
-      @page.run_callbacks(:after_save)
+      @page.run_callbacks(:before_save)
       @page.page_title
     end
   end
@@ -72,7 +72,7 @@ describe Page do
   describe "when page description contains whitespace" do
     before { @page.page_title = "  yesterday all my \n troubles     seemed    so \t far away      " }
     it "should clean description of whitespace" do
-      @page.run_callbacks(:after_save)
+      @page.run_callbacks(:before_save)
       @page.description
     end
   end
