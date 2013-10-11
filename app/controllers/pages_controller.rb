@@ -2,7 +2,6 @@ class PagesController < ApplicationController
 
 
 def index
-	# @users = User.order(:name).page params[:page]
 	@pages = Page.page params[:page]
 end
 
