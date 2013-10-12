@@ -1,7 +1,9 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 table {
+  margin-left: 350px;
   width: 60%;
   border: 1px solid black;
   cellspacing: 0;
@@ -64,18 +66,14 @@ table {
 }
 
 .sidebar {
-  width: 290px;
-  display: table-cell;
-  padding: 0px 50px 0px;
-  float: left; /* Обтекание по правому краю */
-  width: 15%
-
+  width: 240px;
+  float: left;
+  padding: 10px 0 10px 0;
 }
-  
-  
+
 .sidebar > ul {
   margin: 0;
-  padding: 3px;
+  padding: 3px 3px 0;
   border: 1px solid #d2d2d2;
   border-radius: 5px;
   list-style: none;
@@ -84,11 +82,11 @@ table {
 .sidebar li {
   height: 32px;
   line-height: 32px;
-  padding: 0 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin: 0 0 3px 0;
-  text-align: center;
+  width: 100%;
+  text-align: left;
   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
   background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
@@ -96,5 +94,66 @@ table {
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
 }
 
+.sidebar li a,
+.sidebar li span {
+  font-size: 14px;
+  color: #003;
+  padding: 0 20px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
 
+.sidebar li:hover,
+.sidebar li.active {
+  background: #58b059;
+  border: 1px solid #58b059;
+}
 
+.sidebar li:hover a,
+.sidebar li:hover,
+.sidebar li.active a,
+.sidebar li.active {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar ul ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 3px 0;
+}
+
+.sidebar ul li.active + ul {  
+  display: block;
+}
+
+.sidebar ul ul li {
+  background: none;
+  border: 0;
+}
+.sidebar ul ul li:hover,
+.sidebar ul ul li.active {
+  background: #d2d2d2;
+  border: 0;
+}
+.sidebar ul ul li a {
+  padding: 0 0 0 35px;
+}
+.sidebar ul ul li:hover a,
+.sidebar ul ul li.active a {
+  color: #000;
+}
+.sidebar i.sidebar-icon {
+  display: inline-block;
+  background: url('/assets/images/sidebar-icon.png');
+  height: 14px;
+  width: 14px;
+  margin: 0 10px 0 10px;
+}
+
+.sidebar li:hover i.sidebar-icon,
+.sidebar li.active i.sidebar-icon {
+  background: url('/assets/images/sidebar-icon.png') 0 -15px;
+  height: 9px;
+}

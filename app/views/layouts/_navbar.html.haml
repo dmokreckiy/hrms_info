@@ -1,8 +1,34 @@
-%nav.sidebar
-  %ul#navigation
-    %li= link_to "Pages", pages_path, {class: "sidebar-icon"}
-    %li= link_to "Templates", '#', {class: "sidebar-icon"}
-    %li= link_to "Files",  '#', {class: "sidebar-icon"}
-    %li= link_to "Galleries", '#', {class: "sidebar-icon"}
-    %li= link_to "Styles", '#', {class: "sidebar-icon"}
-    %li= link_to "Components", '#', {class: "sidebar-icon"}
+/ %nav.sidebar
+/   %ul#navigation
+/     %li= link_to "Pages", pages_path, {class: "sidebar-icon"}
+/     %li= link_to "Templates", '#', {class: "sidebar-icon"}
+/     %li= link_to "Files",  '#', {class: "sidebar-icon"}
+/     %li= link_to "Galleries", '#', {class: "sidebar-icon"}
+/     %li= link_to "Styles", '#', {class: "sidebar-icon"}
+/     %li= link_to "Components", '#', {class: "sidebar-icon"}
+%section.wrap.main
+  %section.wrap-in
+    %nav.sidebar
+      %ul#navigation
+        %li
+          %a{href: "#"} Dashboard
+        %li
+          %a{href: "#"} My account
+        %li.active
+          %a{href: "#"} Pages
+        %li
+          %i.sidebar-icon>
+          Security
+          %ul
+            %li
+              %a{href: "#"} Users
+            %li
+              %a{href: "#"} Roles
+            %li
+              %a{href: "#"} Capabilities
+        %li
+          %a{href: "#"} Competences
+        %li
+          %a{href: "#"} Groups
+        %li
+          %a{href: "#"} Company
