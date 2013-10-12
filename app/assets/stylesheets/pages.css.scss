@@ -3,69 +3,55 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 table {
-  margin-left: 350px;
-  width: 60%;
+  margin-top: 30px;
+  float: center;
+  margin-left: 300px;
+  width: 70%;
   border: 1px solid black;
   cellspacing: 0;
   cellpadding: 3;
   border-collapse: collapse;
   th { 
     text-align: center;
-    background: #ccc;
     padding: 5px; 
-    border: 1px solid black;
+    border: 1px solid #c6c6c6;
   }
   
   td { 
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid #c6c6c6;
    }
 }
 
+/* action-bar */
+.action {
+  border-bottom: 1px solid #4dae3b;
+  height: 50px;
+}
+
 .action-bar {
-	float:right;
-    height: auto !important;
-    padding: 0px 140px;
-    display: inline-block;
+  margin-right: 85px;
+  display: inline-block;
+  padding: 6px 0;
+  position: absolute;
+  right: 0px;
 }
-
-#filter_search {
-        type: "text";
-        placeholder: "Search";
-        margin: 10px;
+.action-bar input {
+  height: 30px;
 }
-        .search {
-                margin: 15px 0px 10px;
-        }
-
+.action-buttons {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px;
+}
 .action-buttons button {
-    min-width: 115px;
-    margin-right: -150;
-  }
-
-  .proceed_button {
-
-          background-color: #33CC66; 
-          padding: 2px 4px;
-          font: 18px sans-serif;
-          text-decoration: none;
-          border-radius: 5px;
-          -moz-border-radius: 5px; 
-          -webkit-border-radius: 5px;
-         
-          color: #000;
-          
-          margin: 0px 10px; 
-
+  min-width: 115px;
 }
 
-#buttons {
-		float:right;
-        margin-top: 8px;
-        margin-left: 10px;      
-}
-
+/* sidebar */
 .sidebar {
+  margin-left: 30px;
   width: 240px;
   float: left;
   padding: 10px 0 10px 0;
@@ -156,4 +142,72 @@ table {
 .sidebar li.active i.sidebar-icon {
   background: url('/assets/images/sidebar-icon.png') 0 -15px;
   height: 9px;
+}
+
+/* list */
+
+.list {
+  margin-left: 350px;
+  display: table;
+  width: 70%;
+  border-collapse: collapse;
+}
+.list p {
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.list-head {
+  display: table-header-group;
+  font-weight: bold;
+}
+
+.list-head .list-row {
+  border-bottom: 1px solid #999999;
+}
+
+.list-body {
+  display: table-row-group;
+}
+
+.list-body .list-row {
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.list-row {
+  display: table-row;
+  height: 35px;
+  line-height: 35px;
+}
+.list-row .list-cell:first-child {
+  padding: 0 0 0 20px;
+}
+.list-row.active {
+  background: #e6e6e6;
+}
+.list-row.active:hover {
+  background: #f5f5f5;
+}
+
+.list-cell {
+  display: table-cell;
+}
+
+.list-cell.id {
+  width: 40px;
+}
+
+.list-cell.description {
+    width: 600px;
+}
+
+.list-cell.last {
+  width: 125px;
+}
+.list-cell.object {
+  width: 150px;
+}
+
+.action-list label {
+  width: 135px;
 }
