@@ -5,7 +5,7 @@ class PageReport
   #
   
   scope do
-    Page
+    Page.order("updated_at desc")
   end
 
   #
@@ -23,8 +23,11 @@ class PageReport
   # Columns
   #
 
-  column(:id)
-  column(:page_title)
+  column(:id, header: "Page ID" )
+  column(:page_title, header: "Page Title")
+  column(:published, header: "Published") do |published_record| 
+    published_record.published ? "Yes" : "No"
+  end
 
   #column(:registration_type) do |record|
    # record.registration_type.humanize
