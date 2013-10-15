@@ -26,7 +26,14 @@ class PageReport
   column(:id, header: "Page ID" )
   column(:page_title, header: "Page Title")
   column(:published, header: "Published") do |published_record| 
-    published_record.published ? "Yes" : "No"
+# just yes and no
+#    published_record.published ? "Yes" : "No"
+
+# erb checkboxes
+    published_record.published ? '<input type="checkbox" disabled="disabled" checked="checked">' : '<input type="checkbox" disabled="disabled">'
+
+# haml checkboxes
+#    published_record.published ? "%input{checked: "checked", disabled: "disabled", type: "checkbox"/" : "%input{disabled: "disabled", type: "checkbox"/"
   end
 
   #column(:registration_type) do |record|
