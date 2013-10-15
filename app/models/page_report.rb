@@ -12,7 +12,11 @@ class PageReport
   # Filters
   #
   
-  filter(:page_title, :string)
+  filter(:page_title, :string, header: "Search") do |value, scope|
+    scope.where("page_title like '%#{value}%'")
+    #oracle case insensitive search
+    #scope.where("page_title LIKE INITCAP('%#{value}%')")
+  end
   #filter(:disabled, :eboolean)
   #filter(:registration_type, :enum, :select => User::REGISTRATION_TYPES.map {|r| [r.humanize, r]})
   #filter(:logins_count, :integer, :range => true, :default => proc { [User.minimum(:logins_count), User.maximum(:logins_count)]})
