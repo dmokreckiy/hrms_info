@@ -1,4 +1,4 @@
-<h2>Create a new page</h2>
+<!-- <h2>Create a new page</h2>
 <%= form_for(@page)  do |f| %>
 
   <div  class = "buttons">   
@@ -75,4 +75,65 @@
     
     </div>
   </div>
+<% end %> -->
+<%= form_for(@page)  do |page| %>
+<div class="wrap action">
+    <div class="wrap-in">
+      <div class="action-bar">
+        <div class="action-buttons">
+          <button id="action-apply" class="btn btn-success" name="apply" disabled="disabled">Apply</button>
+          <button id="action-view" class="btn btn-success" name="view" disabled="disabled">View</button>
+          <button id="action-save" class="btn btn-success" name="save" type="submit">Save</button>
+          <button id="action-cancel" class="btn btn-success" name="cancel" type="button" onclick="location.href='/pages'">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="wrap main">       
+    <section class="wrap-in">
+      <nav class="sidebar">
+        <ul id="navigation">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">My account</a></li>
+          <li class="active"><a href="#">Pages</a></li>
+          <li><i class="sidebar-icon"></i>Security
+            <ul>
+              <li><a href="#">Users</a></li>
+              <li><a href="#">Roles</a></li>
+              <li><a href="#">Capabilities</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Competences</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Company</a></li>
+        </ul>
+      </nav>    
+<!-- методы по заполнению полей   -->
+    <%= page.label("Page title")%>
+    <%= page.text_field :page_title %>
+
+    <%= page.label("Page url") %>
+    <%= page.text_field :page_url %>
+
+    <%= page.label("Keywords") %>
+    <%= page.text_field :keywords %>
+
+    <%= page.label("Description") %>
+    <%= page.text_area :description %>
+
+    <%= page.label("Parent_page_id") %>
+    <%= page.select(:parent_page_id, options_for_select(['None'])) %>
+
+    <%= page.label :page_type %>
+    <%= page.select(:page_type, options_for_select(['None'])) %>
+
+    <%= page.label("Top menu") %>
+    <%= page.check_box(:display_top_menu) %>
+
+    <%= page.label("Bottom menu")%>
+    <%= page.check_box(:display_bottom_menu) %>
+
+    <%= page.label("Published") %>
+    <%= page.check_box(:published) %>
+
 <% end %>
