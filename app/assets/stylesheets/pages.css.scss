@@ -2,26 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table {
-  margin-top: 30px;
-  float: center;
-  margin-left: 300px;
-  width: 70%;
-  border: 1px solid black;
-  cellspacing: 0;
-  cellpadding: 3;
-  border-collapse: collapse;
-  th { 
-    text-align: center;
-    padding: 5px; 
-    border: 1px solid #c6c6c6;
-  }
-  
-  td { 
-    padding: 5px;
-    border: 1px solid #c6c6c6;
-   }
-}
 
 /* action-bar */
 .action {
@@ -30,7 +10,7 @@ table {
 }
 
 .action-bar {
-  margin-right: 85px;
+  margin-right: 55px;
   display: inline-block;
   padding: 6px 0;
   position: absolute;
@@ -147,7 +127,7 @@ table {
 /* list */
 
 .list {
-  margin-left: 350px;
+  margin-left: 330px;
   display: table;
   width: 70%;
   border-collapse: collapse;
@@ -163,7 +143,7 @@ table {
 }
 
 .list-head .list-row {
-  border-bottom: 1px solid #999999;
+  border-bottom: 2px solid #999999;
 }
 
 .list-body {
@@ -194,7 +174,7 @@ table {
 }
 
 .list-cell.id {
-  width: 40px;
+  width: 50px;
 }
 
 .list-cell.description {
@@ -210,4 +190,11 @@ table {
 
 .action-list label {
   width: 135px;
+}
+
+.checkbox2 {
+  margin-left: 30px;
+}
+input[type= "checkbox"] {
+  margin-bottom: 5px;
 }
