@@ -18,7 +18,7 @@
         .list-cell
           %p{"data-sort" => "title"}
             Title
-            %i.icon-chevron-down
+            %i.icon-chevron-down              
         .list-cell.object
           %p Published
         .list-cell.last
@@ -29,12 +29,12 @@
       .list-body
         .list-row
           .list-cell
-            %input#1{type: "checkbox"}/
+            = check_box_tag(:id)
             %label{for: "1"}
           .list-cell= page.page_title
           .list-cell
             .checkbox2
-              %input#2{type: "checkbox"}/
+              = check_box_tag(:published)
             %label{align: "center", for: "2"}
           .list-cell= page.updated_at.strftime("%d/%m/%y %l:%M %p")
 #pagination
