@@ -13,6 +13,7 @@ def create
 	  	redirect_to pages_path
 	  else
 	  	render 'new'
+	  	flash[:failure] = "Page save failed"
 	end
 end
 
