@@ -18,14 +18,14 @@
 #
 
 class Page < ActiveRecord::Base
-	VALID_NAME_REGEX = /[a-zA-Z0-9+\'\"\.\,\:\;\-]/
+  VALID_NAME_REGEX = /[a-zA-Z0-9+\'\"\.\,\:\;\-]/
 
 # чистка пробелов(в начале, в конце, несколько пробелов подряд в середине), переводов строки и табуляции
-	before_save do
-		self.page_title.squish!
-		self.description.squish!
-	end
-	
+  before_save do
+    self.page_title.squish!
+    self.description.squish!
+  end
+  
   attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
 # валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
   validates :page_title, presence: true, format: { with: VALID_NAME_REGEX }, length: { minimum: 3, maximum: 50 }
