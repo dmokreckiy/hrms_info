@@ -33,5 +33,4 @@ class Page < ActiveRecord::Base
   validates :page_url, presence: true, format: { with: VALID_NAME_REGEX }
 # валидации на длину описания и соответствующий формат  
   validates :description, length: { maximum: 200 }, format: { with: VALID_NAME_REGEX }
-
 end
