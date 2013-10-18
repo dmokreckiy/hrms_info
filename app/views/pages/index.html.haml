@@ -5,7 +5,7 @@
         %button#new.btn.btn-success{onclick: "location.href='/pages/new'"} New
         %button#view.btn.btn-success{disabled: "disabled"} View
         %button#edit.btn.btn-success{disabled: "disabled"} Edit
-        %button#delete.btn.btn-success{method: "delete", confirm: "Are you sure?"} Delete
+        %button#delete.btn.btn-success{disabled: "disabled"} Delete 
       %input#filter.filter.search-query{placeholder: "Search", type: "text"}/
 %section.wrap.main
   %section.wrap-in
@@ -63,4 +63,4 @@
                 %label{align: "center", for: "2"}
               .list-cell= page.updated_at.strftime("%d/%m/%y %l:%M %p")
     #pagination
-      = paginate @pages, window: 1, outer_window: 2
+      = paginate @pages, window: 2, outer_window: 2

@@ -23,7 +23,7 @@ end
 group :development, :test do
   gem 'sqlite3', ">= 1.3.8"
   gem 'byebug'
-  gem 'rb-readline'
+  gem 'rb-readline', '0.4.2'
   gem "annotate", "~> 2.5.0"
   gem 'faker'
 end
