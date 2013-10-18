@@ -8,16 +8,16 @@ describe Page do
 
   subject { @page }
 
-  it { should respond_to (:page_title) }
-  it { should respond_to (:page_url) }
-  it { should respond_to (:keywords) }
-  it { should respond_to (:description) }
-  it { should respond_to (:content) }
-  it { should respond_to (:parent_page_id) }
-  it { should respond_to (:page_type) }
-  it { should respond_to (:display_top_menu) }
-  it { should respond_to (:display_bottom_menu) }
-  it { should respond_to (:published) }
+  it { should respond_to(:page_title) }
+  it { should respond_to(:page_url) }
+  it { should respond_to(:keywords) }
+  it { should respond_to(:description) }
+  it { should respond_to(:content) }
+  it { should respond_to(:parent_page_id) }
+  it { should respond_to(:page_type) }
+  it { should respond_to(:display_top_menu) }
+  it { should respond_to(:display_bottom_menu) }
+  it { should respond_to(:published) }
 
   it { should be_valid }
 
@@ -38,7 +38,8 @@ describe Page do
 
   describe "when title format is invalid" do
     it "should not be valid" do
-      titles = %w[ti/tle За родину мать %^&*()]
+      #titles = %w[ti/tle За родину мать %^&*()]
+      titles = ['ti/tle', 'За родину мать', '%^&*()']
       titles.each do |invalid_titles|
         @page.page_title = invalid_titles
         expect(@page).not_to be_valid
