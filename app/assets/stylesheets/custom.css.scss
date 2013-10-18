@@ -21,6 +21,8 @@
 /* footer */
 
 .footer {
+  margin-bottom: -5px;
+  padding-top: 5px;
   height: 50px;
   border-top: 1px solid #4dae3b;
   background: #999;
@@ -49,4 +51,40 @@
 #pagination {
   margin-left: 330px;
   margin-top: 50px;
+}
+
+
+
+
+html, body {
+  height: 100%;
+  font-family: Tahoma, Arial, Helvetica;
+  font-size: 14px;
+}
+
+.wrap-in {
+  display: table;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+
+.wrap {
+  min-width: 1024px;
+  width: 100%;
+}
+
+.main {
+  height: auto !important;
+  height: 100%;
+  min-height: 100%;
+}
+
+.mainside {
+  margin: 0 0 0 240px;
+  padding: 10px 0 0 50px;
+  position: relative;
+  
 }

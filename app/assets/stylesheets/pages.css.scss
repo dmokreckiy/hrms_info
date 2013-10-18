@@ -10,7 +10,6 @@
 }
 
 .action-bar {
-  margin-right: 55px;
   display: inline-block;
   padding: 6px 0;
   position: absolute;
@@ -31,7 +30,6 @@
 
 /* sidebar */
 .sidebar {
-  margin-left: 30px;
   width: 240px;
   float: left;
   padding: 10px 0 10px 0;
@@ -127,9 +125,8 @@
 /* list */
 
 .list {
-  margin-left: 330px;
   display: table;
-  width: 70%;
+  width: 100%;
   border-collapse: collapse;
 }
 .list p {
@@ -205,13 +202,12 @@ input[type= "checkbox"] {
  */
 .form-box {
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 .tab-pane > .form-box {
   margin: 35px 0 0;
   font-size: 14px;
-  box-sizing: border-box;
+  
 }
 
 /*
