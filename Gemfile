@@ -23,7 +23,7 @@ end
 group :development, :test do
   gem 'sqlite3', ">= 1.3.8"
   gem 'byebug'
-  gem 'rb-readline'
+  gem 'rb-readline', '0.4.2'
   gem "annotate", "~> 2.5.0"
   gem 'faker'
 end
@@ -42,5 +42,15 @@ end
 # gem 'unicorn'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
+
+
+group :development, :test do
+  gem 'debugger'
+end
+
+gem 'kaminari' 
+group :development, :test do
+  gem 'debugger'
+end
 # Use debugger
 # gem 'debugger', group: [:development, :test]

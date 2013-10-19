@@ -1,11 +1,11 @@
 class CreatePages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
-      t.string :page_title
-      t.string :page_url
-      t.text :keywords
-      t.string :description
-      t.text :content
+      t.string  :page_title
+      t.string  :page_url
+      t.text    :keywords
+      t.string  :description
+      t.text    :content
       t.integer :parent_page_id
       t.integer :page_type
       t.boolean :display_top_menu
@@ -14,6 +14,6 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :pages, :page_title
+      add_index :pages, :page_title
   end
 end

@@ -1,24 +1,66 @@
-.navbar
-  .navbar-inner
+.wrap.action
+  .wrap-in
     .action-bar
       .action-buttons
-        %ul.nav
-          %li= button_to "New page", new_page_path, class: "btn btn-success", id: "buttons"
-          %li= button_to "View", page_path(:id), class: "btn btn-success", id: "buttons"
-          %li= button_to "Edit content", edit_page_path(:id), class: "btn btn-success", id: "buttons"
-          %li= button_to "Delete", page_path(:id), :method => :delete,  class: "btn btn-success", id: "buttons"
-        %input#filter_search{class: "filter_search-query"}
-%section
-  = render 'layouts/navbar'
-  %table
-    %tr
-    %th Title
-    %th Published 
-    %th Last changed
-                        
-    - @pages.each do |i|
-                        
-      %tr
-      %td{width: "40%", align: "center"}= i.page_title 
-      %td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
-      %td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
+        %button#new.btn.btn-success{onclick: "location.href='/pages/new'"} New
+        %button#view.btn.btn-success{disabled: "disabled"} View
+        %button#edit.btn.btn-success{disabled: "disabled"} Edit
+        %button#delete.btn.btn-success{disabled: "disabled"} Delete 
+      %input#filter.filter.search-query{placeholder: "Search", type: "text"}/
+%section.wrap.main
+  %section.wrap-in
+    %nav.sidebar
+      %ul#navigation
+        %li
+          %a{href: "#"} Dashboard
+        %li
+          %a{href: "#"} My account
+        %li.active
+          %a{href: pages_path} Pages
+        %li
+          %i.sidebar-icon>
+          Security
+          %ul
+            %li
+              %a{href: "#"} Users
+            %li
+              %a{href: "#"} Roles
+            %li
+              %a{href: "#"} Capabilities
+        %li
+          %a{href: "#"} Competences
+        %li
+          %a{href: "#"} Groups
+        %li
+          %a{href: "#"} Company  
+    %section.mainside
+      .list
+        .list-head
+          .list-row
+            .list-cell.id
+              %input#check-all{"data-check" => ".list-body", type: "checkbox"}/
+              %label{for: "check-all"}
+            .list-cell
+              %p{"data-sort" => "title"}
+                Title
+                %i.icon-chevron-down              
+            .list-cell.object
+              %p Published
+            .list-cell.last
+              %p{"data-sort" => "lastChanged"}
+                Last changed
+                %i.icon-chevron-down
+        - @pages.each do |page|
+          .list-body
+            .list-row
+              .list-cell
+                = check_box_tag("pages_ids[]", page.id, false, :id => "page_#{page.id}")
+                %label{for: "1"}
+              .list-cell= page.page_title
+              .list-cell
+                .checkbox2
+                  = check_box_tag(:published)
+                %label{align: "center", for: "2"}
+              .list-cell= page.updated_at.strftime("%d/%m/%y %l:%M %p")
+    #pagination
+      = paginate @pages, window: 2, outer_window: 2
