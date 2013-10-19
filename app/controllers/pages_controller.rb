@@ -6,12 +6,20 @@ class PagesController < ApplicationController
 	end
 
 	def create
-		@page = Page.create(params[:page])
-		if @page.errors.empty?
+    # @user = User.new(params[:user]) # zapolnenie parametrov dlia usera
+    # if @user.save
+    #   sign_in @user # posle registracii srazu na str pol'zovatelia
+    #   flash[:success] = "Welcome to MTwitter!" # flash-soobshenie ob uspeshnoi registracii
+    #   redirect_to @user   # redirectit na stranicu usera
+    # else
+    #   render 'new'
+    # end
+		@page = Page.new(params[:page])
+		if @page.save
 			flash[:success] = "The #{@page.page_title} has been saved" 
 			redirect_to pages_path
 		else
-			redirect_to new_page_path(@page)
+			render 'new'
 		end
 	end
 
