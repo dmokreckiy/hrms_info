@@ -7,12 +7,12 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(params[:page])
-      if @page.save
+    @page = Page.create(params[:page])
+      if @page.errors.empty?
         flash[:success] = "The #{@page.page_title} has been saved" 
         redirect_to pages_path
       else
-        render 'new'
+        redirect_to new_page_path(@page)
         flash[:failure] = "Page save failed"
     end
   end

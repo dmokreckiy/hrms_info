@@ -26,8 +26,8 @@ class Page < ActiveRecord::Base
     self.description.squish!
   end
   
-  attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
 # валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
+  attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
   validates :page_title, presence: true, format: { with: VALID_NAME_REGEX }, length: { minimum: 3, maximum: 50 }
 # валидации на наличие ссылки страницы, соответствии формату 
   validates :page_url, presence: true, format: { with: VALID_NAME_REGEX }
