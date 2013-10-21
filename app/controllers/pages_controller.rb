@@ -34,9 +34,9 @@ class PagesController < ApplicationController
   private
 
   #сортировка по умолчания - created desc - от нового к старым значениям
-  def sorting (column_name = 'created', order_type = 'desc', filter = nil)
+  def sort_and_filter (column_name = 'created', order_type = 'desc', filter = nil)
     unless filter.nil?
-        @filtered = @pages.where("page_title LIKE INITCAP('%#{filter}%')")
+        @filtered = @pages.where("page_title LIKE INITCAP(?)", filter)
       else
         @filtered = @pages
     end
