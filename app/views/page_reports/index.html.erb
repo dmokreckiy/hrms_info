@@ -1,10 +1,6 @@
-<h3>Pages Report</h3>
-
 <div class="left">
   <%= datagrid_form_for @page_report %>
-
-
-  <div class='total'>Total: <%= @page_report.assets.count %></div>
+  
   <%= datagrid_table(@page_report, @assets) %>
   <%= will_paginate @assets %>
   

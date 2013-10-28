@@ -29,7 +29,7 @@ class PageReport
 
   column(:id, header: "Page ID" )
   column(:page_title, header: "Page Title")
-  column(:published, header: "Published") do |published_record| 
+  column(:published, header: "Published", order: false) do |published_record| 
 # just yes and no
 #    published_record.published ? "Yes" : "No"
 
