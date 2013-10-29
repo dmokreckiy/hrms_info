@@ -2,8 +2,10 @@ class PagesController < ApplicationController
 
 
 def index
-	@pages = Page.paginate(page: params[:page],:per_page => 20)
-	@pages.sort_by!{ |p| p.created_at }
+	#@pages = Page.paginate(page: params[:page],:per_page => 20)
+	#@pages.sort_by!{ |p| p.created_at }
+	@page_grid = PageGrid.new(params[:page_grid])
+    @assets = @page_grid.assets.page(params[:page])
 end
 
 def create

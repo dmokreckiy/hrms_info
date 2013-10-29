@@ -10,7 +10,15 @@
         %input#filter_search{class: "filter_search-query"}
 %section
   = render 'layouts/navbar'
-  .left
-  = datagrid_form_for @page_grid
-  = datagrid_table(@page_grid, @assets)
-  = will_paginate @assets
+  %table
+    %tr
+    %th Title
+    %th Published 
+    %th Last changed
+                        
+    - @pages.each do |i|
+                        
+      %tr
+      %td{width: "40%", align: "center"}= i.page_title 
+      %td{width: "20%", align: "center"}= check_box_tag :publsihed, true, false
+      %td{width: "30%", align: "center"}= i.updated_at.strftime("%d/%m/%y %l:%M %p")
