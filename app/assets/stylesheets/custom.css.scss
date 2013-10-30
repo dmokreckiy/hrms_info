@@ -1,6 +1,18 @@
 @import "bootstrap";
 
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #E01B5D;
+}
+
 /* header */
 
 .header-top {
@@ -55,7 +67,6 @@
 
 
 
-
 html, body {
   height: 100%;
   font-family: Tahoma, Arial, Helvetica;
@@ -87,6 +98,24 @@ html, body {
   padding: 10px 0 0 50px;
   position: relative;
   
+}
+
+.trollolo {
+  display: table;
+}
+
+.trollolo div {
+  margin: 0;
+  padding: 0;
+}
+
+.trollolo label {
+  display: block;
+}
+
+.items-list {
+  list-style: none;
+  margin: 0;
 }
 
 #error_explanation {

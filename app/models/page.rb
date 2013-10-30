@@ -2,6 +2,8 @@ class Page < ActiveRecord::Base
   
   VALID_NAME_REGEX = /[a-zA-Z0-9+\'\"\.\,\:\;\-]/
 
+  default_scope order: 'pages.created_at DESC'
+  
   before_save do
     self.page_title.squish!
     self.description.squish!

@@ -34,7 +34,7 @@ GEM
       tzinfo (~> 0.3.37)
     annotate (2.5.0)
       rake
-    arel (4.0.0)
+    arel (4.0.1)
     atomic (1.1.14)
     bootstrap-sass (2.1.0.0)
     bootstrap-will_paginate (0.0.6)

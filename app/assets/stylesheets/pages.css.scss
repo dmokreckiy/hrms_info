@@ -110,7 +110,7 @@
 }
 .sidebar i.sidebar-icon {
   display: inline-block;
-  background: url('/assets/images/sidebar-icon.png');
+  background: url('../images/sidebar-icon.png');
   height: 14px;
   width: 14px;
   margin: 0 10px 0 10px;
@@ -118,10 +118,9 @@
 
 .sidebar li:hover i.sidebar-icon,
 .sidebar li.active i.sidebar-icon {
-  background: url('/assets/images/sidebar-icon.png') 0 -15px;
+  background: url('../images/sidebar-icon.png') 0 -15px;
   height: 9px;
 }
-
 /* list */
 
 .list {
@@ -552,3 +551,5 @@ input[type= "checkbox"] {
 .nav-tabs > li > a {
   border-bottom: 0;
 }
+
+/* checkbox*/
