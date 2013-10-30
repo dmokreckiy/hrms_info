@@ -7,10 +7,10 @@
           %li= button_to "View", page_path(:id), class: "btn btn-success", id: "buttons"
           %li= button_to "Edit content", edit_page_path(:id), class: "btn btn-success", id: "buttons"
           %li= button_to "Delete", page_path(:id), :method => :delete,  class: "btn btn-success", id: "buttons"
-        %input#filter_search{class: "filter_search-query"}
+          /%input#filter_search{class: "filter_search-query"}
+          %li= datagrid_form_for @page_grid
 %section
   = render 'layouts/navbar'
   .left
-  = datagrid_form_for @page_grid
   = datagrid_table(@page_grid, @assets)
   = will_paginate @assets
