@@ -15,6 +15,7 @@ gem 'protected_attributes'
 gem 'rspec-rails'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'ancestry'
 
 group :doc do
   gem 'sdoc', require: false
