@@ -4,7 +4,11 @@ AppProject::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#index'
-   resources :pages 
+   resources :pages do 
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

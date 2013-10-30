@@ -6,13 +6,12 @@ class PagesController < ApplicationController
 	end
 
 	def create
-		@page = Page.create(params[:page])
-		if @page.errors.empty?
+		@page = Page.new(params[:page])
+		if @page.save
 			flash[:success] = "The #{@page.page_title} has been saved" 
 			redirect_to pages_path
 		else
-			redirect_to new_page_path(@page)
-	  	flash[:failure] = "Page save failed"
+			render 'new'
 		end
 	end
 
@@ -24,10 +23,13 @@ class PagesController < ApplicationController
 		@page = Page.find(params[:id])
 	end
 
-	def destroy 
-		@page = Page.find(params[:id])
-		@page.destroy
-		redirect_to action: "index"
-	end
+  def destroy_multiple
+    Page.destroy(params[:pages])
+
+    respond_to do |format|
+      format.html { redirect_to pages_path }
+      format.json { head :no_content }
+    end
+  end
 
 end
