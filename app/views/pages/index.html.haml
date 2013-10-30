@@ -1,16 +1,40 @@
-.navbar
-  .navbar-inner
+.wrap.action
+  .wrap-in
     .action-bar
       .action-buttons
-        %ul.nav
-          %li= button_to "New page", new_page_path, class: "btn btn-success", id: "buttons"
-          %li= button_to "View", page_path(:id), class: "btn btn-success", id: "buttons"
-          %li= button_to "Edit content", edit_page_path(:id), class: "btn btn-success", id: "buttons"
-          %li= button_to "Delete", page_path(:id), :method => :delete,  class: "btn btn-success", id: "buttons"
-          /%input#filter_search{class: "filter_search-query"}
-          %li= datagrid_form_for @page_grid
-%section
-  = render 'layouts/navbar'
-  .left
-  = datagrid_table(@page_grid, @assets)
-  = will_paginate @assets
+        %button#new.btn.btn-success{onclick: "location.href='/pages/new'"} New
+        %button#view.btn.btn-success{disabled: "disabled"} View
+        %button#edit.btn.btn-success{disabled: "disabled"} Edit
+        %button#delete.btn.btn-success{disabled: "disabled"} Delete
+        %input#filter.filter.search-query{placeholder: "Search", type: "text"}/
+        
+%section.wrap.main
+  %section.wrap-in
+    %nav.sidebar
+      %ul#navigation
+        %li
+          %a{href: "#"} Dashboard
+        %li
+          %a{href: "#"} My account
+        %li.active
+          %a{href: pages_path} Pages
+        %li
+          %i.sidebar-icon>
+          Security
+          %ul
+            %li
+              %a{href: "#"} Users
+            %li
+              %a{href: "#"} Roles
+            %li
+              %a{href: "#"} Capabilities
+        %li
+          %a{href: "#"} Competences
+        %li
+          %a{href: "#"} Groups
+        %li
+          %a{href: "#"} Company  
+    %section.mainside    
+      = datagrid_table(@page_grid, @assets)
+      #pagination
+      = paginate @assets, window: 2, outer_window: 2

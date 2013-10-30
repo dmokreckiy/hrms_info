@@ -7,7 +7,7 @@ AppProject::Application.routes.draw do
    resources :pages 
    post 'pages/new' => 'pages#create'
    get  'page_grids' => 'pages#index'
-  #resources :page_grids, :only => [:index]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
