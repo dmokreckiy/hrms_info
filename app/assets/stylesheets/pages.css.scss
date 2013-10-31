@@ -18,6 +18,9 @@
 .action-bar input {
   height: 30px;
 }
+.action-bar > form {
+     display: inline-block;
+}
 .action-buttons {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -554,7 +557,7 @@ input[type= "checkbox"] {
 }
 
 table {
-  width: 80%;
+  width: 100%;
   border: 1px solid black;
   cellspacing: 0;
   cellpadding: 3;

@@ -12,7 +12,7 @@ class PageGrid
   # Filters
   #
   
-  filter(:page_title, :string, header: "Search") do |value, scope|
+  filter(:page_title, :string) do |value, scope|
     scope.where("page_title like '%#{value}%'")
     #oracle case insensitive search
     #scope.where("page_title LIKE INITCAP('%#{value}%')")
@@ -27,8 +27,8 @@ class PageGrid
   # Columns
   #
 
-  column(:id, header: "Page ID" )
-  column(:page_title, header: "Page Title")
+  #column(:id )
+  column(:page_title, header: "Title")
   column(:published, header: "Published", order: false) do |published_record| 
 # just yes and no
 #    published_record.published ? "Yes" : "No"
@@ -47,7 +47,7 @@ class PageGrid
   #column(:disabled) do
    # disabled? ? "Yes" : "No"
   #end
-  column(:updated_at) do |record|
+  column(:updated_at, header: "Last changed") do |record|
     record.updated_at.strftime("%d/%m/%y %l:%M %p")
   end
 end
