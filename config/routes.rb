@@ -5,11 +5,10 @@ AppProject::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
    resources :pages 
-<<<<<<< HEAD
+
    post 'pages/new' => 'pages#create'
    get  'page_grids' => 'pages#index'
-=======
->>>>>>> master
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
