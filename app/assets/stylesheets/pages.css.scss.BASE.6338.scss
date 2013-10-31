@@ -1,0 +1,100 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  width: 60%;
+  border: 1px solid black;
+  cellspacing: 0;
+  cellpadding: 3;
+  border-collapse: collapse;
+  th { 
+    text-align: center;
+    background: #ccc;
+    padding: 5px; 
+    border: 1px solid black;
+  }
+  
+  td { 
+    padding: 5px;
+    border: 1px solid black;
+   }
+}
+
+.action-bar {
+	float:right;
+    height: auto !important;
+    padding: 0px 140px;
+    display: inline-block;
+}
+
+#filter_search {
+        type: "text";
+        placeholder: "Search";
+        margin: 10px;
+}
+        .search {
+                margin: 15px 0px 10px;
+        }
+
+.action-buttons button {
+    min-width: 115px;
+    margin-right: -150;
+  }
+
+  .proceed_button {
+
+          background-color: #33CC66; 
+          padding: 2px 4px;
+          font: 18px sans-serif;
+          text-decoration: none;
+          border-radius: 5px;
+          -moz-border-radius: 5px; 
+          -webkit-border-radius: 5px;
+         
+          color: #000;
+          
+          margin: 0px 10px; 
+
+}
+
+#buttons {
+		float:right;
+        margin-top: 8px;
+        margin-left: 10px;      
+}
+
+.sidebar {
+  width: 290px;
+  display: table-cell;
+  padding: 0px 50px 0px;
+  float: left; /* Обтекание по правому краю */
+  width: 15%
+
+}
+  
+  
+.sidebar > ul {
+  margin: 0;
+  padding: 3px;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.sidebar li {
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 0 3px 0;
+  text-align: center;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+}
+
+
+

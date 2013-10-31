@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
 
+<<<<<<< HEAD
 def index
 	@page_grid = PageGrid.new(params[:page_grid])
     @assets = @page_grid.assets.page(params[:page])
@@ -21,17 +22,35 @@ end
 def new
 	@page = Page.new
 end
+=======
+	def index
+		@pages = Page.page params[:page]
+	end
 
-def show
-	@page = Page.find(params[:id])
+	def create
+		@page = Page.create(params[:page])
+		if @page.errors.empty?
+			flash[:success] = "The #{@page.page_title} has been saved" 
+			redirect_to pages_path
+		else
+			redirect_to new_page_path(@page)
+	  	flash[:failure] = "Page save failed"
+		end
+	end
+>>>>>>> master
+
+	def new
+		@page = Page.new
+	end
+
+	def show
+		@page = Page.find(params[:id])
+	end
+
+	def destroy 
+		@page = Page.find(params[:id])
+		@page.destroy
+		redirect_to action: "index"
+	end
+
 end
-
-def destroy 
-	@page = Page.find(params[:id])
-	@page.destroy
-	redirect_to action: "index"
-end
-
-end
-
-	

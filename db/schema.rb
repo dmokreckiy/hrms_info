@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20131007075224) do
     t.string   "page_title"
     t.string   "page_url"
     t.text     "keywords"
-    t.text     "description"
+    t.string   "description"
     t.text     "content"
     t.integer  "parent_page_id"
     t.integer  "page_type"
@@ -32,5 +32,7 @@ ActiveRecord::Schema.define(version: 20131007075224) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "pages", ["page_title"], name: "index_pages_on_page_title"
 
 end
