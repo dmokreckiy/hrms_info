@@ -25,6 +25,17 @@ class Page < ActiveRecord::Base
     self.page_title.squish!
     self.description.squish!
   end
+
+# вставка значений по умолчанию в поля page_title и page_url пустые в форме
+  before_validation do
+    if Page.last.nil?
+      @page_def_num = 1
+    else
+      @page_def_num = Page.last.id
+    end
+    self.page_title = "Page#{@page_def_num+1}" if self.page_title.blank?
+    self.page_url = "page-name-#{@page_def_num+1}" if self.page_url.blank?
+  end
   
 # валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
   attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
