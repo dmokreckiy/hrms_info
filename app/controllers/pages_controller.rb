@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
   def index
     @page_grid = PageGrid.new(params[:page_grid])
-    @assets = @page_grid.assets.page(params[:page])
+    @assets = @page_grid.assets.paginate(:page => params[:page], :per_page => 20)
   end
 
 	
