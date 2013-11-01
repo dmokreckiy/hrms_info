@@ -28,7 +28,7 @@ class PageGrid
   #
 
   #column(:id )
-  column(:id, header: "ID", html: true) do |record|
+  column(:id, header: "", html: true, order: false) do |record|
     content_tag(:input, content_tag(:input, nil, type: 'checkbox'), {type: 'hidden', name: 'id', value: record.id})
   end
   column(:page_title, header: "Title")
