@@ -15,7 +15,7 @@ class PageGrid
   filter(:page_title, :string) do |value, scope|
     scope.where("page_title like '%#{value}%'")
     #oracle case insensitive search
-    #scope.where("page_title LIKE INITCAP('%#{value}%')")
+    #scope.where("page_title LIKE INITCAP('%?%')", value)
   end
   #filter(:disabled, :eboolean)
   #filter(:registration_type, :enum, :select => User::REGISTRATION_TYPES.map {|r| [r.humanize, r]})
@@ -28,6 +28,9 @@ class PageGrid
   #
 
   #column(:id )
+  column(:id, header: "ID", html: true) do |record|
+    content_tag(:input, content_tag(:input, nil, type: 'checkbox'), {type: 'hidden', name: 'id', value: record.id})
+  end
   column(:page_title, header: "Title")
   column(:published, header: "Published", order: false) do |published_record| 
 # just yes and no
@@ -35,6 +38,7 @@ class PageGrid
 
 # erb checkboxes
     published_record.published ? '<input type="checkbox" disabled="disabled" checked="checked">' : '<input type="checkbox" disabled="disabled">'
+    #style="text-align: center"
 
 # haml checkboxes
 #    published_record.published ? "%input{checked: "checked", disabled: "disabled", type: "checkbox"/" : "%input{disabled: "disabled", type: "checkbox"/"
