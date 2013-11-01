@@ -33,8 +33,8 @@ class Page < ActiveRecord::Base
     else
       @page_def_num = Page.last.id
     end
-    self.page_title = "PageTitle#{@page_def_num+1}" if self.page_title.blank?
-    self.page_url = "/PageUrl#{@page_def_num+1}" if self.page_url.blank?
+    self.page_title = "Page#{@page_def_num+1}" if self.page_title.blank?
+    self.page_url = "page-name-#{@page_def_num+1}" if self.page_url.blank?
   end
   
 # валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
