@@ -25,7 +25,19 @@ $(document).ready(function () {
     $(".btn-group.bootstrap-select").hover(function() { $(".btn-group.bootstrap-select").popover("toggle"); });
     hideCheckAll();
 	
-	$('#object').change(function() {
+	$('#object');
+}
+
+function showTab() {
+
+    var pageHash = document.location.hash;
+
+    if (pageHash == "#content") {
+        $('#pageTabs a[href="#tab2"]').tab('show');
+    } else {
+        //$('#pageTabs a[href="#tab1"]').tab('show');
+    }
+}).change(function() {
 		$('.removeMeName').remove();
 		unDisplayAllTask();
 		hideCheckAll();
@@ -48,7 +60,7 @@ $(document).ready(function () {
             action: "cancel",
             title: tittle,
             text: "Are you sure you want to exit without saving changes?",
-            onAgree: function () { window.location.href = "/rms-info/capabilities"; }
+            onAgree: function () { window.location.href = "/capabilities"; }
         });
 	});
 });

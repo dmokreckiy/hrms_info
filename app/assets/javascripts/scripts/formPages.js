@@ -72,26 +72,26 @@ $(document).ready(function () {
     });
 });
 
-//	insert default values of title or url
+//  insert default values of title or url
 function insertDefaults() {
 
     var $titleInput = $('input[type="text"]').eq(0), $urlInput = $('input[type="text"]').eq(1), title = $titleInput.val(), url = $urlInput.val(), defaultTitle = $titleInput.attr('data-defaultName');
 
-    //	Is title empty ?
+    //  Is title empty ?
     if (!title) {
 
-        //	Is ulr empty ? than it become same as default title
+        //  Is ulr empty ? than it become same as default title
         if (!url) {
             $urlInput.val('/' + defaultTitle.toLowerCase());
         }
         $titleInput.val(defaultTitle);
         return;
     }
-    //	If title value is not null we use it in URL with some chars replacement
+    //  If title value is not null we use it in URL with some chars replacement
     if (!url && title) {
         $urlInput.val('/' + replaceForbiddenChars(title));
     }
-    //	refactor title value to use it in url
+    //  refactor title value to use it in url
     function replaceForbiddenChars(string) {
         var newStr = '', i = 0, l = string.length;
         for (i; i < l; i++) {
