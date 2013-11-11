@@ -1,0 +1,64 @@
+#editor {
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-collapse: separate;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075) inset;
+    font-size: 14px;
+	min-height: 400px;
+    max-height: 600px;
+    outline: medium none;
+    overflow-y: scroll;
+    padding: 4px;
+}
+
+#voiceBtn {
+    background-color: transparent;
+    border: medium none transparent;
+    box-shadow: none;
+    color: transparent;
+    cursor: pointer;
+    transform: scale(2, 2);
+    width: 20px;
+}
+
+div[data-role="editor-toolbar"] {
+    -moz-user-select: none;
+}
+
+.dropdown-menu a {
+    cursor: pointer;
+}
+
+ul {
+	list-style: disc inside none;
+}
+
+ol {
+	list-style: decimal inside none;
+}
+
+.btn-toolbar .btn {
+	padding: 4px 10px;
+}
+
+input.span2[type="text"] {
+	height: 30px;
+}
+
+input[data-edit="insertImage"] {
+	cursor: pointer;
+}
+
+.btn-group > a > input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 41px;
+	height: 30px;
+}
+
+.btn-toolbar::selection , .btn-group > .btn::selection {
+	background: transparent;
+}
