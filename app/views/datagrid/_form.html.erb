@@ -1,7 +1,0 @@
-<%= form_for grid, options do |f| %>
-  <% grid.filters.each do |filter| %>
-    <%= f.datagrid_filter filter, placeholder: "Search", id: "filter", class: "filter search-query"  %>
-   
-  <% end %>
-  
-<% end -%>
