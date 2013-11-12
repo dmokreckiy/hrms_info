@@ -1,0 +1,118 @@
+= form_for(@page) do |page|
+  .wrap.action
+    .wrap-in
+      .action-bar
+        .action-buttons
+          %button#action-apply.btn.btn-success{disabled: "disabled", name: "apply"} Apply
+          %button#action-view.btn.btn-success{disabled: "disabled", name: "view"} View
+          %button#action-save.btn.btn-success{name: "save", type: "submit"} Save
+          %button#action-cancel.btn.btn-success{name: "cancel", onclick: "location.href='/pages'", type: "button"} Cancel
+  %section.wrap.main
+    %section.wrap-in
+      %nav.sidebar
+        %ul#navigation
+          %li
+            %a{href: "#"} Dashboard
+          %li
+            %a{href: "#"} My account
+          %li.active
+            %a{href: "#"} Pages
+          %li
+            %i.sidebar-icon>
+            Security
+            %ul
+              %li
+                %a{href: "#"} Users
+              %li
+                %a{href: "#"} Roles
+              %li
+                %a{href: "#"} Capabilities
+          %li
+            %a{href: "#"} Competences
+          %li
+            %a{href: "#"} Groups
+          %li
+            %a{href: "#"} Company
+      %section.mainside
+        .tabbable
+          %ul#pageTabs.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#tab1"} Properties
+            %li
+              %a{"data-toggle" => "tab", href: "#tab2"} Content
+          .tab-content
+            #tab1.tab-pane.active
+              .form
+                %input#id{name: "id", type: "hidden", value: ""}/
+                %input#pageContent{name: "pageContent", type: "hidden", value: " "}/
+                .form-row
+                  .form-cell Page title
+                  .form-cell
+                    = page.text_field :page_title
+                .form-row
+                  .form-cell  
+                  #nameValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[A-Za-z0-9.,_;:\\ \\-]+$"}
+                      Use only English alphabet
+                      letters of both cases, digits, punctuation marks like . , : ; - _
+                    .uniqueness{"data-condition" => "null"} The name is not unique
+                    .minLength{"data-condition" => "3"} You must have at least 3 symbols
+                    .maxLength{"data-condition" => "50"} You can type in 50 symbols maximum
+                    .lettersCount{"data-condition" => "[A-Za-z]+"} You must have at least one letter
+                    .empty{"data-condition" => "null"} Please, enter a name
+                .form-row
+                  .form-cell URL
+                  .form-cell
+                    = page.text_field :page_url
+                .form-row
+                  .form-cell  
+                  #urlValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^/((\\w|[-])+/?)+$"}
+                      Please enter valid data to the URL field
+                    .uniqueness{"data-condition" => ""} Page with this url already exist
+                .form-row
+                  .form-cell Keywords
+                  .form-cell
+                    = page.text_field :keywords
+                .form-row
+                  .form-cell  
+                  #keywordsValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[a-z0-9.,-]+$"}
+                      Use English alphabet letters of
+                      lower case, digits, punctuation marks as .- only and separate keywords by commas
+                    .empty{"data-condition" => ""} Please, enter keywords
+                .form-row
+                  .form-cell Description
+                  .form-cell
+                    = page.text_area :description
+                .form-row
+                  .form-cell  
+                  #descriptionValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[A-Za-z0-9.?!,_;:\\ \\-]+$"}
+                      Use only English alphabet letters of both
+                      cases, digits, punctuation marks like . , : ; - _
+                    .maxLength{"data-condition" => "200"} You can type in 200 symbols maximum
+                .form-row
+                  .form-cell Parent page
+                  .form-cell
+                    %select#page-type.selectpicker{name: "properties['parent_id']"}
+                      %option{selected: "selected", value: "-1"} None
+                .form-row.empty
+                .form-row
+                  .form-cell Page type
+                  .form-cell
+                    %select#page-type.selectpicker{name: "properties[']"}
+                      %option{selected: "selected", value: "-1"} None
+                .form-row.empty
+                .form-row
+                  .form-cell Display at top
+                  .form-cell
+                    = page.check_box(:display_top_menu)
+                .form-row
+                  .form-cell Display at bottom
+                  .form-cell
+                    = page.check_box(:display_bottom_menu)
+                .form-row
+                  .form-cell Publish a page
+                  .form-cell
+                    = page.check_box(:published)
