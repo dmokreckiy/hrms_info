@@ -1,0 +1,122 @@
+= form_for(@page) do |page|
+  .wrap.action
+    .wrap-in
+      .action-bar
+        .action-buttons
+          %button#action-apply.btn.btn-success{name: "apply", type: "submit"} Apply
+          %button#action-view.btn.btn-success{name: "view", type: "button"} View
+          %button#action-save.btn.btn-success{name: "save", type: "submit"} Save
+          %button#action-cancel.btn.btn-success{name: "cancel", type: "button"} Cancel
+  %section.wrap.main
+    %section.wrap-in
+      %nav.sidebar
+        %ul#navigation
+          %li
+            %a{href: "#"} Dashboard
+          %li
+            %a{href: "#"} My account
+          %li.active
+            %a{href: "#"} Pages
+          %li
+            %i.sidebar-icon>
+            Security
+          %ul
+            %li
+              %a{href: "#"} Users
+            %li
+              %a{href: "#"} Roles
+            %li
+              %a{href: "#"} Capabilities
+          %li
+            %a{href: "#"} Competences
+          %li
+            %a{href: "#"} Groups
+          %li
+            %a{href: "#"} Company
+      %section.mainside
+        .tabbable
+          %ul#pageTabs.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#tab1"} Properties
+            %li
+              %a{"data-toggle" => "tab", href: "#tab2"} Content
+          .tab-content
+            #tab1.tab-pane.active
+              .form
+                .form-row
+                  .form-cell Page title
+                  .form-cell
+                    %input#name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", "data-defaultname" => "PaGe123", maxlength: "50", name: "page[page_title]", type: "text", value: ""}/
+                .form-row
+                  .form-cell  
+                  #nameValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[A-Za-z0-9.,_;:\\ \\-]+$"}
+                      Use only English alphabet letters of both cases, digits, punctuation marks like . , : ; - _
+                    .uniqueness{"data-condition" => "null"} The name is not unique
+                    .minLength{"data-condition" => "3"} You must have at least 3 symbols
+                    .maxLength{"data-condition" => "50"} You can type in 50 symbols maximum
+                    .lettersCount{"data-condition" => "[A-Za-z]+"} You must have at least one letter
+                .form-row
+                  .form-cell URL
+                  .form-cell
+                    %input#url{"data-content" => "Use English alphabet\r\n                      letters of lower case, digits, punctuation marks like - _ only. URL must be unique", "data-div" => "urlError", name: "page[page_url]", type: "text", value: ""}/
+                .form-row
+                  .form-cell  
+                  #urlValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^/((\\w|[-])+/?)+$"}
+                      Please enter valid data to the URL field
+                    .uniqueness{"data-condition" => ""} Page with this url already exist
+                .form-row
+                  .form-cell Keywords
+                  .form-cell
+                    %input#keywords{"data-content" => "Use English\r\n                      alphabet letters of lower case, digits, punctuation marks as .- only and separate\r\n                      keywords by commas", name: "page[keywords]", type: "text", value: " "}/
+                .form-row
+                  .form-cell  
+                  #keywordsValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[a-z0-9.,-]+$"}
+                      Use English alphabet letters of lower case, digits, punctuation marks as .
+                      \- only and separate keywords by commas
+                    .empty{"data-condition" => ""} Please, enter keywords
+                .form-row
+                  .form-cell Description
+                  .form-cell
+                    %textarea#description{"data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Maximum 200 symbols.", maxlength: "200", name: "page[description]"}
+                .form-row
+                  .form-cell  
+                  #descriptionValidate.form-cell.error-box
+                    .validLetters{"data-condition" => "^[A-Za-z0-9.?!,_;:\\ \\-]+$"}
+                      Use only English alphabet letters of both cases, digits, punctuation marks like . , : ; - _
+                    .maxLength{"data-condition" => "200"} You can type in 200 symbols maximum
+                .form-row
+                  .form-cell Parent page
+                  .form-cell
+                    .btn-group.bootstrap-select
+                      %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
+                        %span.filter-option.pull-left> None
+                        \ 
+                        %span.caret
+                .form-row.empty
+                .form-row
+                  .form-cell Page type
+                  .form-cell
+                    .btn-group.bootstrap-select
+                      %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
+                        %span.filter-option.pull-left> None
+                        \ 
+                        %span.caret
+                .form-row.empty
+                .form-row
+                  .form-cell Display at top
+                  .form-cell
+                    %input#displayTop{name: "properties['show in top menu']", type: "checkbox", value: "true"}/
+                    %label{for: "displayTop"}
+                .form-row
+                  .form-cell Display at bottom
+                  .form-cell
+                    %input#displayBottom{name: "properties['show in bottom menu']", type: "checkbox", value: "true"}/
+                    %label{for: "displayBottom"}
+                .form-row
+                  .form-cell Publish a page
+                  .form-cell
+                    %input#publish{name: "page[published]", type: "checkbox", value: "true"}/
+                    %label{for: "publish"}
