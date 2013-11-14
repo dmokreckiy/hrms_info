@@ -1,0 +1,4 @@
+= form_for grid, options do |f|
+  - grid.filters.each do |filter|
+    .datagrid-filter.filter
+      = f.datagrid_filter filter

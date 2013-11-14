@@ -6,6 +6,10 @@ AppProject::Application.routes.draw do
   root 'pages#index'
    resources :pages 
 
+   post 'pages/new' => 'pages#create'
+   get  'page_grids' => 'pages#index'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

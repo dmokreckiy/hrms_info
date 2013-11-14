@@ -552,3 +552,26 @@ input[type= "checkbox"] {
 .nav-tabs > li > a {
   border-bottom: 0;
 }
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  cellspacing: 0;
+  cellpadding: 3;
+  border-collapse: collapse;
+  th { 
+    text-align: center;
+    background: #ccc;
+    padding: 5px; 
+    border: 1px solid black;
+  }
+  
+  td { 
+    padding: 5px;
+    border: 1px solid black;
+  }
+}
+
+.action-bar > form {
+     display: inline-block;
+}

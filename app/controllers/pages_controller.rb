@@ -1,9 +1,11 @@
 class PagesController < ApplicationController
 
-
   def index
-    @pages = Page.page params[:page]
+    @page_grid = PageGrid.new(params[:page_grid])
+    @assets = @page_grid.assets.paginate(:page => params[:page], :per_page => 20)
   end
+
+  
 
   def create
     @page = Page.create(params[:page])
