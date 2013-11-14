@@ -44,6 +44,7 @@
             #tab1.tab-pane.active
               .form
                 %input#id{name: "id", type: "hidden", value: ""}/
+                = render 'shared/error_messages'
                 %input#pageContent{name: "pageContent", type: "hidden", value: " "}/
                 .form-row
                   .form-cell Page title
