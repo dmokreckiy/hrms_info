@@ -12,8 +12,8 @@
 						        (options.title != "" ?
                                     '<div class="modal-header">' +
                                         (options.action == "cancel" || !"message" ?
-                                            '<button type="button" class="close is-modalBtn1" data-dismiss="modal" aria-hidden="true">Г—</button>' :
-                                            '<button type="button" class="close is-modalBtn2" data-dismiss="modal" aria-hidden="true">Г—</button>') +
+                                            '<button type="button" class="close is-modalBtn1" data-dismiss="modal" aria-hidden="true">x</button>' :
+                                            '<button type="button" class="close is-modalBtn2" data-dismiss="modal" aria-hidden="true">x</button>') +
                                         '<h3 id="myModalLabel">'+options.title+'</h3>'+
                                     '</div>'
                                 : "") +

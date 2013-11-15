@@ -8,6 +8,7 @@ AppProject::Application.routes.draw do
 
    post 'pages/new' => 'pages#create'
    get  'page_grids' => 'pages#index'
+   get 'pages/:id/view' => 'pages#show'
 
 
   # Example of regular route:

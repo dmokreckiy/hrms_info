@@ -1,11 +1,11 @@
 /*!
- * Bootstrap v2.3.2
+ * Bootstrap v2.3.1
  *
- * Copyright 2013 Twitter, Inc
+ * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Designed and built with all the love in the world by @mdo and @fat.
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
 .clearfix {
@@ -72,7 +72,7 @@ html {
 }
 
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #58B059;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -232,12 +232,13 @@ body {
 
 a {
   color: #0088cc;
+  cursor: pointer;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #005580;
+  color: #40923d;
   text-decoration: underline;
 }
 
@@ -649,7 +650,7 @@ a:focus {
 }
 
 p {
-  margin: 0 0 10px;
+  margin: 0 0 5px;
 }
 
 .lead {
@@ -2282,7 +2283,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../../images/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2306,7 +2307,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"],
 .dropdown-submenu:focus > a > [class*=" icon-"] {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("../../images/glyphicons-halflings-white.png");
 }
 
 .icon-glass {
@@ -2960,14 +2961,7 @@ table th[class*="span"],
 .dropdown-submenu:focus > a {
   color: #ffffff;
   text-decoration: none;
-  background-color: #0081c2;
-  background-image: -moz-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3));
-  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3);
-  background-image: -o-linear-gradient(top, #0088cc, #0077b3);
-  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0);
+  background-color: #58b158;
 }
 
 .dropdown-menu > .active > a,
@@ -3007,15 +3001,6 @@ table th[class*="span"],
 
 .open > .dropdown-menu {
   display: block;
-}
-
-.dropdown-backdrop {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 990;
 }
 
 .pull-right > .dropdown-menu {
@@ -3264,8 +3249,8 @@ button.close {
 }
 
 .btn:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 0;
+  outline: 0px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
@@ -3456,7 +3441,8 @@ input[type="button"].btn-block {
   background-color: #942a25 \9;
 }
 
-.btn-success {
+.btn-success, 
+.btn-info {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #5bb75b;
@@ -3489,23 +3475,6 @@ input[type="button"].btn-block {
   background-color: #408140 \9;
 }
 
-.btn-info {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #49afcd;
-  *background-color: #2f96b4;
-  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
-  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
-  background-repeat: repeat-x;
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-
 .btn-info:hover,
 .btn-info:focus,
 .btn-info:active,
@@ -3513,8 +3482,8 @@ input[type="button"].btn-block {
 .btn-info.disabled,
 .btn-info[disabled] {
   color: #ffffff;
-  background-color: #2f96b4;
-  *background-color: #2a85a0;
+  background-color: #40923d;
+  *background-color: #4a934a;
 }
 
 .btn-info:active,
@@ -4058,7 +4027,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #adadad;
 }
 
 .nav-tabs > li {
@@ -4068,6 +4037,8 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
+  color: #58B059;
+  font-size: 14px;
   line-height: 20px;
   border: 1px solid transparent;
   -webkit-border-radius: 4px 4px 0 0;
@@ -4086,7 +4057,7 @@ input[type="submit"].btn.btn-mini {
   color: #555555;
   cursor: default;
   background-color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #adadad;
   border-bottom-color: transparent;
 }
 
@@ -4229,6 +4200,7 @@ input[type="submit"].btn.btn-mini {
 
 .tabbable {
   *zoom: 1;
+  margin: 70px 0 0 50px;
 }
 
 .tabbable:before,
@@ -4243,7 +4215,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .tab-content {
-  overflow: auto;
+  overflow: visible;
 }
 
 .tabs-below > .nav-tabs,
@@ -5005,7 +4977,13 @@ input[type="submit"].btn.btn-mini {
   border-left-width: 0;
 }
 
-.pagination ul > li > a:hover,
+.pagination ul > li > a:hover {
+	background-color: #58b158;
+}
+.pagination ul > .active > a:hover {
+	background-color: #f5f5f5;
+}
+
 .pagination ul > li > a:focus,
 .pagination ul > .active > a,
 .pagination ul > .active > span {
@@ -5018,9 +4996,9 @@ input[type="submit"].btn.btn-mini {
   cursor: default;
 }
 
+.pagination ul > .disabled > a:hover,
 .pagination ul > .disabled > span,
 .pagination ul > .disabled > a,
-.pagination ul > .disabled > a:hover,
 .pagination ul > .disabled > a:focus {
   color: #999999;
   cursor: default;
@@ -5192,8 +5170,8 @@ input[type="submit"].btn.btn-mini {
 
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
 
 .modal {

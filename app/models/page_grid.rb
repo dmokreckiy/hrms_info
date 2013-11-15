@@ -23,7 +23,8 @@ class PageGrid
   
   column(:page_title, header: "Title")
   column(:published, header: "Published", order: false) do |published_record| 
-    published_record.published ? '<input type="checkbox" disabled="disabled" checked="checked">' : '<input type="checkbox" disabled="disabled">'
+    published_record.published ? 'true' : 'false'
+    # published_record0.published ? '<input type="checkbox" disabled="disabled" checked="checked">' : '<input type="checkbox" disabled="disabled">'
   end
 
   column(:updated_at, header: "Last changed") do |record|

@@ -553,25 +553,51 @@ input[type= "checkbox"] {
   border-bottom: 0;
 }
 
-table {
-  width: 100%;
-  border: 1px solid black;
-  cellspacing: 0;
-  cellpadding: 3;
-  border-collapse: collapse;
-  th { 
-    text-align: center;
-    background: #ccc;
-    padding: 5px; 
-    border: 1px solid black;
-  }
-  
-  td { 
-    padding: 5px;
-    border: 1px solid black;
-  }
-}
-
 .action-bar > form {
      display: inline-block;
+}
+
+
+
+table.datagrid  {
+  width: 100%;
+}
+.datagrid .id {
+  padding-left: 10px;
+  width: 40px;
+}
+.datagrid thead {
+  font-weight: bold;
+}
+.datagrid tr {
+  border-bottom: 1px solid #999;
+  height: 35px;
+  line-height: 35px;
+}
+.datagrid tbody tr {
+  border-bottom: 1px solid #c6c6c6;
+}
+.datagrid tr.active {
+  background: #e6e6e6;
+}
+.datagrid tr.active:hover {
+  background: #f5f5f5;
+}
+.order {
+  display: inline-block;
+}
+.order a {
+  color: #000;
+  text-decoration: none;
+}
+.datagrid  .page_title {
+  display: inline-block;
+}
+.datagrid  .published {
+  text-align: left;
+  width: 150px;
+}
+.datagrid .updated_at {
+  text-align: left;
+  width: 155px;
 }
