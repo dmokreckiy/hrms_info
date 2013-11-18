@@ -3,7 +3,7 @@ AppProject::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#index'
+  root 'static_pages#home'
    resources :pages 
 
    post 'pages/new' => 'pages#create'
