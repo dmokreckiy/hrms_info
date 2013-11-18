@@ -1,3 +1,4 @@
+= render 'pages/header'
 .wrap.action
   .wrap-in
     .action-bar
@@ -41,3 +42,4 @@
       = datagrid_table(@page_grid, @assets)
       #pagination
       = paginate @assets, window: 2, outer_window: 2
+= render 'layouts/footer'

@@ -1,3 +1,4 @@
+= render 'pages/header'
 = form_for(@page) do |page|
   .wrap.action
     .wrap-in
@@ -120,3 +121,4 @@
                   .form-cell
                     %input#publish{name: "page[published]", type: "checkbox", value: "true"}/
                     %label{for: "publish"}
+= render 'pages/footer'

@@ -1,0 +1,129 @@
+<header class="pageHeader">
+    <div class="loginWrapper">
+      <div class="loginContainer">
+        <p class="welcomText">Welcom, Guest</p>
+        <div class="loginLinks">
+          <a href="#">Sing In</a>
+        </div>
+      </div>
+    </div>
+    <div class="headerWrapper">
+      <a class="noHover" href="">
+        <div class="logo">
+          <div class="logoImg">
+          <%= image_tag("htp_ec_logo.png", :alt => "logo", :width => "115", :height => "93" ) %>
+          </div>
+          <p class="logoText">hi-Tech park educational center</p>
+        </div>
+      </a>
+      <div class="buttonContainer">
+        <a class="noHover" href="#1"><div id="link1" class="headerButton"><p class="buttonText">About us</p></div></a>
+        <a class="noHover" href="#2"><div class="headerButton"><p class="buttonText">Our Competences</p></div></a>
+        <a class="noHover" href="#3"><div class="headerButton"><p class="buttonText">Contact us</p></div></a>
+      </div>
+    </div>
+  </header>
+<section class="pagesFunctionality">
+    <div class="bodyWrapper">
+      <div id="hrmsCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#" data-slide-to="0" class="active"></li>
+          <li data-target="#" data-slide-to="1"></li>
+          <li data-target="#" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="active item">
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/hrms.jpg" width="1024" height="480" alt="slideshow" />
+            <div class="carousel-caption">
+              <p class="corouselTittle">hrms info</p>
+              <p class="corouselText">The slideshow below shows a generic plugin and component for cycling through elements
+                like a carousel.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/cat.jpg" width="1024" height="480" alt="slideshow" />
+            <div class="carousel-caption">
+              <p class="corouselTittle">hrms cats</p>
+              <p class="corouselText">The slideshow below shows a generic plugin and component for cycling through elements
+                like a carousel.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/world.jpg" width="1024" height="480" alt="slideshow" />
+            <div class="carousel-caption">
+              <p class="corouselTittle">hrms world</p>
+              <p class="corouselText">The slideshow below shows a generic plugin and component for cycling through elements
+                like a carousel.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control left" href="#hrmsCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#hrmsCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+      <div class="searchWrapper">
+        <div class="textBox">
+          <h1>We have the resources you need</h1>
+          <h2>Think about your needs & see your candidates now</h2>
+        </div>
+        <form class="searchBox">
+          <input type="search" placeholder="Search..." name="s">
+          <div class="buttonSearch">
+          <%= image_tag("filter_icon_green.png", :alt => "search", :width => "17", :height => "17" ) %>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="newsWrapper">
+      <div class="newsBox">
+        <div class="newsBlock">
+          <a class="noHover" href="#4">
+            <div class="newsTittle">
+              <p>Professional</p>
+              <h2>research</h2>
+            </div>
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/box01.jpg" width="330" height="140" alt="news" />
+          </a>
+          <a href="#4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+              magna aliqua...</p>
+          </a>
+        </div>
+        <div class="newsBlock midBlock">
+          <a class="noHover" href="#5">
+            <div class="newsTittle">
+              <p>Attention</p>
+              <h2>to detail</h2>
+            </div>
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/box02.jpg" width="330" height="140" alt="news" />
+          </a>
+          <a href="#5">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua...</p>
+          </a>
+        </div>
+        <div class="newsBlock">
+          <a class="noHover" href="#6">
+            <div class="newsTittle">
+              <p>Our</p>
+              <h2>projects</h2>
+            </div>
+            <img src="https://dl.dropboxusercontent.com/u/58416472/lib/img/box03.jpg" width="330" height="140" alt="news" />
+          </a>
+          <a href="#6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua...</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="pageFooter">
+    <div class="footerWrapper">
+      <div class="footerBox">
+        <p>&copy; 2013, human resource management system</p>
+        <a href="#1">About us</a>
+        <a href="#2">Our Competences</a>
+        <a href="#3">Contact us</a>
+      </div>
+    </div>
+  </footer>
