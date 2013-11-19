@@ -2,8 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background: url(/images/default_page_body.png) repeat top;
-  background-image: image-url("/../../images/default_page_body.png") repeat top;
+  background: url(/assets/default_page_body.png) repeat top;
 }
 .loginWrapper,
 .searchWrapper {

@@ -8,5 +8,8 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def competences
+  end
    
 end
