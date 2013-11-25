@@ -32,6 +32,19 @@ $(document).ready(function () {
 
     $("#action-save").attr("disabled", false);
 
+    $("#action-save").click(function () {
+        $("body").modalWindow({
+                        action: "message",
+                        title: "Saved",
+                        text: "The page has been saved: ", //+ data.recordName,
+                        onAgree: function () {
+                            if (type === "save") {
+                                window.location.href = "/pages";
+                            }
+                        }
+        });
+    });
+    
     $("#action-cancel").click(function () {
         redirect = function () {
             window.location.href = "/pages";
@@ -50,6 +63,37 @@ $(document).ready(function () {
         })
     });
 
+    
+    
+    
+    
+    // --------------------- link ModalWindow begin ---------------------- //
+  var formChanged = false;
+  $("input[type=text], input[type=checkbox], textarea").change(function(){
+      formChanged = true;
+    });
+  $("a").click(function (event) {
+    if(formChanged) {
+        //modal on logo
+        var href = $(this).prop("href");
+        event.preventDefault();
+        redirect = function () {
+            window.location.href = href;
+        };
+
+        $("body").modalWindow({
+            action: "cancel",
+            title: "Redirect",
+            text: "The information is not saved. Are you sure you want to leave the current page?",
+            onAgree: redirect
+        });
+    }
+  });
+    // ----------------------- link ModalWindow end ----------------------- //
+    
+    
+    
+    
     $("#action-save").click(function () {
         $('#name').removeClass('error-validate');
         $('#pageContent').val($('#editor').html());
@@ -203,6 +247,6 @@ function showTab() {
     if (pageHash == "#content") {
         $('#pageTabs a[href="#tab2"]').tab('show');
     } else {
-        //$('#pageTabs a[href="#tab1"]').tab('show');
+        $('#pageTabs a[href="#tab1"]').tab('show');
     }
 }

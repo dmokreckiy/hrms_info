@@ -603,7 +603,7 @@ table.datagrid  {
 }
 
 input[type="checkbox"] {
-  background: url(//checkbox.png) 0 -34px;
+  background: url(/assets/checkbox.png) 0 -34px;
   color: transparent;
   display: none;
   content: '.';
@@ -625,12 +625,23 @@ input[type="checkbox"] + label {
 
 /* checkboxes*/
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
 input[type="checkbox"]:disabled + label {
   cursor: default;
 }
 
 input[type="checkbox"] + label:before {
-  background: url(../../images/checkbox.png) 0 -34px;
+  background: url(/assets/checkbox.png) 0 -34px;
   color: transparent;
   display: inline-block;
   content: '.';
@@ -639,15 +650,24 @@ input[type="checkbox"] + label:before {
   width: 17px;
 }
 
+.datagrid tbody td > input[type="checkbox"],
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+
 input[type="checkbox"] + label:hover:before {
   background-position: 0 0;
 }
 
-input[type="checkbox"]:checked {
+input[type="checkbox"]:checked + label:before {
   background-position: 0 -51px;
 }
 
-input[type="checkbox"]:checked:hover:before {
+input[type="checkbox"]:checked + label:hover:before {
   background-position: 0 -17px;
 }
 

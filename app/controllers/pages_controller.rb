@@ -41,10 +41,12 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
   end
 
-  def destroy 
-    @page = Page.find(params[:id])
-    @page.destroy
-    redirect_to action: "index"
+  def destroy_multiple
+    @ids = Page.find(params[:ids])
+    @ids.destroy_all
+    
+    respond_to do |format|
+      format.html { redirect_to pages_path }
+    end
   end
-
 end
