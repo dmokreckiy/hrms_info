@@ -23,7 +23,7 @@ class Page < ActiveRecord::Base
 # чистка пробелов(в начале, в конце, несколько пробелов подряд в середине), переводов строки и табуляции
   before_save do
     self.page_title.squish!
-    self.description.squish!
+    self.description.squish! unless self.description.blank?
   end
 
 # вставка значений по умолчанию в поля page_title и page_url пустые в форме
