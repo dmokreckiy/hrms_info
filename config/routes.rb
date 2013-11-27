@@ -9,8 +9,8 @@ AppProject::Application.routes.draw do
 
   post 'pages/new' => 'pages#create'
   get  'page_grids' => 'pages#index'
-  get 'pages/:id/view' => 'pages#show'
-  get 'pages/:id/delete' => 'pages#destroy_multiple'
+  get  'pages/:id/view' => 'pages#show'
+  get  'pages/:id/delete' => 'pages#destroy_multiple'
 
   #static_pages
   get '/about' => 'static_pages#about'

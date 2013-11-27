@@ -9,8 +9,7 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.create(params[:page])
-    if @page.errors.empty?
-      flash[:success] = "The #{@page.page_title} has been saved" 
+    if @page.errors.empty? 
       redirect_to pages_path
     else
       redirect_to new_page_path(@page)
@@ -30,7 +29,6 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     @page.update_attributes(params[:page])
       if @page.errors.empty?
-        flash[:success] = "The #{@page.page_title} has been updated"
         redirect_to pages_path
       else
         render 'edit'
@@ -42,11 +40,8 @@ class PagesController < ApplicationController
   end
 
   def destroy_multiple
-    @ids = Page.find(params[:ids])
-    @ids.destroy_all
-    
-    respond_to do |format|
-      format.html { redirect_to pages_path }
-    end
+    @page = Page.find(params[:id])
+    @page.destroy
+    redirect_to pages_path
   end
 end

@@ -4,6 +4,9 @@
 body {
   background: url(/assets/default_page_body.png) repeat top;
 }
+html, body {
+  height: 100%;
+}
 .loginWrapper,
 .searchWrapper {
   background: none repeat scroll 0 0 #a8a8a8;
@@ -17,7 +20,9 @@ body {
 .searchWrapper,
 .carousel,
 .newsBox,
-.footerBox {
+.footerBox,
+h1,
+.wrapper {
   width: 1024px;
   margin: 0px auto;
 }
@@ -60,9 +65,6 @@ a.noHover {
 .mainSerch {
   font-size: 30px;
 }
-.loginWrapper {
-  height: 50px;
-}
 .welcomText,
 .loginLinks {
   position: absolute;
@@ -71,11 +73,17 @@ a.noHover {
 .welcomText {
   padding-left: 20px;
 }
+.loginContainer {
+  height: 50px;
+  position: relative;
+}
 .loginLinks {
-  padding-left: 950px;
+  right: 32px;
+  /*padding-left: 950px;*/
 }
 .headerWrapper {
   height: 112px;
+  overflow: hidden;
 }
 .logo {
   width: 100%;
@@ -247,4 +255,83 @@ input[type="search"] {
   font-size: 24px;
   color: black;
   
+}
+
+/*---------------*/
+
+.wrap {
+    min-width: 1024px;
+    width: 100%;
+}
+.main {
+  height: auto !important;
+  min-height: 100%;
+  position: relative;
+}
+.wrapper {
+  height: 100%;
+  position: relative;
+}
+.wrapper p {
+  margin: 12px 0;
+}
+h1.contact,
+h1.about {
+  background-color: #4EAE3B;
+  border-bottom: 9px solid #a8a8a8;
+  font-size: 32px;
+  color: #fff;
+  padding: 6px 0;
+  text-transform: uppercase;
+}
+.wrapper-contact {
+  float: left;
+  height: 100%;
+  margin: 32px 0 12px 20px;
+  position: relative;
+  width: 60%;
+}
+.wrapper-about {
+  padding: 32px 0 12px 20px;
+  position: relative;
+}
+.wrapper-about h3 {
+  font-size: 24px;
+}
+.wrapper-about article {
+  padding-top: 6px;
+}
+.wrapper-map {
+  float: right;
+  height: 100%;
+  margin: 44px 10% 0 0;
+  position: relative;
+  width: 222px;
+}
+.wrapper-contact > ul ,
+.inner-map > ul {
+    list-style: none outside none;
+    margin: 12px 0;
+}
+ul.address li {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}
+.contact-info,
+.about-info {
+  font-weight: bold;
+}
+.contact-person > li:first-child {
+  font-style: italic;
+}
+.contact-person > li > a{
+  color: #2D821E;
+  text-decoration: underline;
+}
+ul.last {
+  padding-bottom: 23px;
+}
+footer {
+  clear: both;
 }
