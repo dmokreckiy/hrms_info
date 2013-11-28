@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/bogdan/datagrid.git
+  revision: 779ffe3f8eb2192f45c1c79df825b6ab4c85367f
+  specs:
+    datagrid (1.0.1)
+      rails (>= 3.0)
+
+GIT
   remote: https://github.com/yahonda/oracle-enhanced.git
   revision: e2fa3151e392d9b5192097e80fdd76a1b77b7162
   branch: support_schema_creation_rails4
@@ -36,7 +43,7 @@ GEM
       activerecord (>= 3.0.0)
     annotate (2.5.0)
       rake
-    arel (4.0.0)
+    arel (4.0.1)
     atomic (1.1.14)
     bootstrap-sass (2.1.0.0)
     bootstrap-will_paginate (0.0.6)
@@ -45,7 +52,7 @@ GEM
     byebug (2.3.1)
       columnize (~> 0.3.6)
       debugger-linecache (~> 1.2.0)
-    capistrano (3.0.0)
+    capistrano (3.0.1)
       i18n
       rake (>= 10.0.0)
       sshkit (>= 0.0.23)
@@ -97,7 +104,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25)
-    mini_portile (0.5.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
     net-scp (1.1.2)
@@ -128,7 +135,7 @@ GEM
     rb-readline (0.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
-    rspec-core (2.14.6)
+    rspec-core (2.14.7)
     rspec-expectations (2.14.3)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.4)
@@ -175,9 +182,9 @@ GEM
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     will_paginate (3.0.3)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -195,6 +202,7 @@ DEPENDENCIES
   capistrano
   capybara
   coffee-rails (~> 4.0.0)
+  datagrid!
   debugger
   faker
   haml-rails

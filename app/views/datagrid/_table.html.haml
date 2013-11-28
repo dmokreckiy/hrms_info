@@ -1,0 +1,12 @@
+/ Local variables:
+/ * grid - instance of Datagrid
+/ * assets - Array of database Entities
+/ * options - passed options Hash
+= content_tag :table, options[:html] do
+  %thead= datagrid_header(grid, options)
+  %tbody
+    - if assets.empty?
+      %tr
+        %td.noresults{colspan: "100%"}= I18n.t('datagrid.no_results').html_safe
+    - else
+      = datagrid_rows(grid, assets, options)

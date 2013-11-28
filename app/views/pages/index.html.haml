@@ -5,8 +5,11 @@
         %button#new.btn.btn-success{onclick: "location.href='/pages/new'"} New
         %button#view.btn.btn-success{disabled: "disabled"} View
         %button#edit.btn.btn-success{disabled: "disabled"} Edit
-        %button#delete.btn.btn-success{disabled: "disabled"} Delete 
-      %input#filter.filter.search-query{placeholder: "Search", type: "text"}/
+        %button#delete.btn.btn-success{disabled: "disabled"} Delete
+        / %input#filter.filter.search-query{placeholder: "Search", type: "text"}/
+      = datagrid_form_for @page_grid 
+
+       
 %section.wrap.main
   %section.wrap-in
     %nav.sidebar
@@ -33,34 +36,8 @@
           %a{href: "#"} Groups
         %li
           %a{href: "#"} Company  
-    %section.mainside
-      .list
-        .list-head
-          .list-row
-            .list-cell.id
-              %input#check-all{"data-check" => ".list-body", type: "checkbox"}/
-              %label{for: "check-all"}
-            .list-cell
-              %p{"data-sort" => "title"}
-                Title
-                %i.icon-chevron-down              
-            .list-cell.object
-              %p Published
-            .list-cell.last
-              %p{"data-sort" => "lastChanged"}
-                Last changed
-                %i.icon-chevron-down
-        - @pages.each do |page|
-          .list-body
-            .list-row
-              .list-cell
-                = check_box_tag("pages_ids[]", page.id, false, :id => "page_#{page.id}")
-                %label{for: "1"}
-              .list-cell= page.page_title
-              .list-cell
-                .checkbox2
-                  = check_box_tag(:published)
-                %label{align: "center", for: "2"}
-              .list-cell= page.updated_at.strftime("%d/%m/%y %l:%M %p")
-    #pagination
-      = paginate @pages, window: 2, outer_window: 2
+
+    %section.mainside    
+      = datagrid_table(@page_grid, @assets)
+      #pagination
+      = paginate @assets, window: 2, outer_window: 2
