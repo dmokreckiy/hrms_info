@@ -1,0 +1,136 @@
+.attach-header {	
+	display: inline-block;
+	line-height: 30px;
+}
+.attach-header > div {	
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}
+.attach-name {
+	padding: 0 0 0 25px;
+}
+.attach-scale {
+	padding: 0 0 0 505px;
+}
+.attach-type {
+	padding: 0 0 0 130px;
+}
+.attach-list {
+	font-size: 14px;
+}
+
+.attach-list ul {
+	list-style: none;
+	cursor: pointer;
+	display: inline-block;
+	width: 745px;
+}
+
+.attach-list ul ul {
+	width: 775px;
+}
+
+.attach-list ul ul ul {
+	width: 750px;
+}
+.attach-list ul li {
+	line-height: 40px;
+}
+
+.attach-list ul ul {
+	display: none;
+}
+
+.attach-list .active {
+	display: block;
+}
+
+.attach-list .last {
+	margin: 0 0 0 20px;
+	list-style: square;
+}
+
+.attach-list .last .right-side {
+	float: right;
+	display: inline-block;
+	line-height: 40px;
+	width: 250px;
+}
+
+.attach-list .last .right-side > select,
+.attach-list .last .right-side > div {
+	width: 120px;
+	display: inline;
+	line-height: 40px;
+	margin: 0;
+	float: left;
+}
+.attach-list .last .right-side > label {
+    display: inline;
+    line-height: 40px;
+  /*  margin: 11px 0 0 20px;*/
+    float: right;
+}
+
+
+
+.right-side ul.dropdown-menu {
+	width: 100% !important;
+}
+
+::selection {
+	background: transparent;
+}
+::-moz-selection {
+	background: transparent;
+}
+
+/* --- rms-info/competences --- */
+
+.select-list ul li {
+	line-height: 30px !important;
+}
+.select-list ul li span {
+	padding: 2px 2px 2px 2px;
+	margin-right: 4px;
+}
+.select-list ul li button.select-button {
+	position:relative;
+	bottom:2px;
+	height: 26px;
+	width: 26px;
+	        border-radius: 6px;
+	   -moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: center;
+    border: none;		
+}
+.select-line, .select-list ul li button.select-button:hover {
+	background-color: #ddd;
+}
+.select-list ul li button.select-button:active {
+	background-color: #a2c9a2;
+}
+.add-parent {
+	background-image: url(/assets/icon_parent.png);
+}
+.add-child {
+	background-image: url(/assets/images/icon_child.png);
+}
+.remove {
+	background-image: url(/assets/images/icon_remove.png);
+}
+.hidden-line, .add-parent, .add-child, .remove {
+	display: none;	
+}
+.select-button {
+	display: inline !important;
+}
+
+#save, #cancel {
+	height: 30px;
+	width: 70px;
+}
