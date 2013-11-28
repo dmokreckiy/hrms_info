@@ -11,28 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131007075224) do
+ActiveRecord::Schema.define(version: 20131128121633) do
 
-  create_table "page_grids", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "page_grids" because of following NoMethodError
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0xbb87cb3c>
 
-  create_table "pages", force: true do |t|
-    t.string   "page_title"
-    t.string   "page_url"
-    t.text     "keywords"
-    t.string   "description"
-    t.text     "content"
-    t.integer  "parent_page_id",      precision: 38, scale: 0
-    t.integer  "page_type",           precision: 38, scale: 0
-    t.boolean  "display_top_menu",    precision: 1,  scale: 0
-    t.boolean  "display_bottom_menu", precision: 1,  scale: 0
-    t.boolean  "published",           precision: 1,  scale: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "pages", ["page_title"], name: "index_pages_on_page_title"
+# Could not dump table "pages" because of following NoMethodError
+#   undefined method `column_spec_with_oracle_enhanced' for #<ActiveRecord::ConnectionAdapters::SQLite3Adapter:0xbb87cb3c>
 
 end

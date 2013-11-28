@@ -18,6 +18,8 @@
 #
 
 class Page < ActiveRecord::Base
+  has_ancestry
+
   VALID_NAME_REGEX = /[a-zA-Z0-9+\'\"\.\,\:\;\-]/
   attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
 # чистка пробелов(в начале, в конце, несколько пробелов подряд в середине), переводов строки и табуляции
