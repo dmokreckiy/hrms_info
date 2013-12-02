@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-  util.init();
-  
 // ------------------- NOT AJAX -------------------------- //
     $(".select-list span").on('click', function() {
       var clickItem = $(this);
@@ -23,44 +20,5 @@ $(document).ready(function() {
         });
       }
     });
-// ------------------------------------------------------- // 
+  
 });
-
-var util = {
-
-  init : function() {
-    var that = this;
-    $('.attach-list').empty();
-    
-    $.ajax({
-      type : "GET",
-      global : false,
-      url : "api/competences",
-      dataType : "json",
-      success : function(data) {
-          util.build(data);
-      },
-      //error : function(xhr, message) {
-      //  window.location.href = "/rms-info/error/ajax?type=" + message;
-      //}
-    });
-  },  
-
-  build : function(data) {
-      var list = '<ul>';
-      
-      $.each(data.competences, recurse);
-      function recurse(key, val) {
-        list += "<li" + (val.competences.length == 0 ? "class='last'" : "") + "><span>" + (val.competences.length != 0 ? "<i class='icon-plus'></i> " : "") + val.name + "</span>" + "</li>";
-        if (val.competences.length != 0) {
-          list += "<ul>";
-          $.each(val.competences, recurse);
-          list += "</ul>";
-        }
-      };
-
-      $('.attach-list').html(list + "</ul>");
-      this.attach();
-  },
-
-};

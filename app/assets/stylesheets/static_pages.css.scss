@@ -35,7 +35,8 @@ h1,
   color: white;
 }
 .loginContainer a:hover,
-.footerBox a:hover {
+.footerBox a:hover,
+.footerBox .active {
   text-decoration: none;
   color: #4eae3b;
 }
@@ -116,7 +117,8 @@ a.noHover {
   height: 100px;
   border-top: 12px solid #fecc09;
 }
-.headerButton:hover {
+.headerButton:hover,
+.active .headerButton {
   border-top: 12px solid #4eae3b;
 }
 .buttonText {
