@@ -1,109 +1,108 @@
-%body
-  %header.wrap
-    .loginWrapper
-      .loginContainer
-        %a.welcomText{href: "/pages"} Welcome, Administrator
-        %a.loginLinks{href: "#"} Sign In
-    .headerWrapper
-      %a.noHover{href: root_path }
-        .logo
-          %img.logoImg{alt: "logo", height: "93", src: "/assets/htp_ec_logo.png", width: "115"}/
-          %p.logoText hi-Tech park educational center
-      .buttonContainer
-        %a.noHover{href: "/about"}
-          #link1.headerButton
-            %p.buttonText About us
-        %a.noHover{href: "/competences"}
-          .headerButton
-            %p.buttonText Our Competences
-        %a.noHover.active{href: "/contact"}
-          .headerButton
-            %p.buttonText Contact us
-  %section.wrap.main
-    %h1.contact   contact us
-    .wrapper
-      .wrapper-contact
-        %ul
-          %li
-            %span.contact-info +375 (44) 570-22-22
-            (Velcom)
-          %li
-            %span.contact-info +375 (29) 222-24-60
-            (MTS)
-        %ul.contact-person
-          %li On cooperation:
-          %li
-            %span.contact-info Elena Lokteva,
-            Deputy director
-          %li +375 (44) 75-273-75 (Velcom);
-          %li +375 (29) 75-273-75 (MTS ).
-          %li
-            e-mail:
-            %a{href: "mailto:elena.lokteva@it-academy.by"} elena.lokteva@it-academy.by
-          %li Skype: e.lokteva
-        %ul.contact-person
-          %li On Marketing and advertising:
-          %li.contact-info Anatoly Mikishev
-          %li +375 (44) 565-96-89 (Velcom)
-          %li
-            e-mail:
-            %a{href: "mailto:mikishov@gmail.com"} mikishov@gmail.com
-          %li Skype: ingvar.minovara
-        %ul.contact-person
-          %li On Graduates Employment:
-          %li
-            %span.contact-info Elena Matiuk,
-            Human Resource Manager
-          %li +375 (29) 778-41-27 (MTS)
-          %li
-            e-mail:
-            %a{href: "mailto:elena.matiuk@it-academy.by"} elena.matiuk@it-academy.by
-          %li Skype: elena.matiuk
-        %ul.contact-person
-          %li On groups composition and schedule:
-          %li − Java Developer,
-          %li − English for IT professionals
-          %li
-            %span.contact-info Raisa Atroshchenko,
-            Methodist
-          %li
-            e-mail:
-            %a{href: "mailto:Raisa.Atroshchenko@it-academy.by"} Raisa.Atroshchenko@it-academy.by
-        %ul.contact-person
-          %li On groups composition and schedule:
-          %li − C&plus;&plus; Developer,
-          %li − Software Testing Engineer,
-          %li − ASP.NET Developer
-          %li
-            %span.contact-info Natalia Samurganova,
-            Methodist
-          %li
-            e-mail:
-            %a{href: "mailto:natalia.samurganova@it-academy.by"} natalia.samurganova@it-academy.by
-        %ul.contact-person.last
-          %li Оn groups composition and schedule:
-          %li − Business Analyst,
-          %li − Front-end Developer,
-          %li − PHP Developer,
-          %li − Computer Graphics and Design
-          %li
-            %span.contact-info Natalia Hahanova,
-            Methodist
-          %li
-            e-mail:
-            %a{href: "mailto:natalia.hahanova@it-academy.by"} natalia.hahanova@it-academy.by
-      %aside.wrapper-map
-        .inner-map
-          .map
-            %img{alt: "map", height: "222", src: "/assets/map.jpg", width: "222"}/
-          %ul.address
-            %li Minsk, Masherov Ave, 19, 8th Floor.
-            %li +375 (44) 570-22-22
-            %li +375 (29) 222-24-60
-  %footer.wrap
-    .footerWrapper
-      .footerBox
-        %p © 2013, human resource management system
-        %a{href: "/about"} About us
-        %a{href: "/competences"} Our Competences
-        %a.active{href: "/contact"} Contact us
+%header.wrap
+  .loginWrapper
+    .loginContainer
+      %a.welcomText{href: "/pages"} Welcome, Administrator
+      %a.loginLinks{href: "#"} Sign Out
+  .headerWrapper
+    %a.noHover{href: root_path }
+      .logo
+        %img.logoImg{alt: "logo", height: "93", src: "/assets/htp_ec_logo.png", width: "115"}/
+        %p.logoText hi-Tech park educational center
+    .buttonContainer
+      %a.noHover{href: "/about"}
+        #link1.headerButton
+          %p.buttonText About us
+      %a.noHover{href: "/competences"}
+        .headerButton
+          %p.buttonText Our Competences
+      %a.noHover.active{href: "/contact"}
+        .headerButton
+          %p.buttonText Contact us
+%section.wrap.main
+  %h1.contact   contact us
+  .wrapper
+    .wrapper-contact
+      %ul
+        %li
+          %span.contact-info +375 (44) 570-22-22
+          (Velcom)
+        %li
+          %span.contact-info +375 (29) 222-24-60
+          (MTS)
+      %ul.contact-person
+        %li On cooperation:
+        %li
+          %span.contact-info Elena Lokteva,
+          Deputy director
+        %li +375 (44) 75-273-75 (Velcom);
+        %li +375 (29) 75-273-75 (MTS ).
+        %li
+          e-mail:
+          %a{href: "mailto:elena.lokteva@it-academy.by"} elena.lokteva@it-academy.by
+        %li Skype: e.lokteva
+      %ul.contact-person
+        %li On Marketing and advertising:
+        %li.contact-info Anatoly Mikishev
+        %li +375 (44) 565-96-89 (Velcom)
+        %li
+          e-mail:
+          %a{href: "mailto:mikishov@gmail.com"} mikishov@gmail.com
+        %li Skype: ingvar.minovara
+      %ul.contact-person
+        %li On Graduates Employment:
+        %li
+          %span.contact-info Elena Matiuk,
+          Human Resource Manager
+        %li +375 (29) 778-41-27 (MTS)
+        %li
+          e-mail:
+          %a{href: "mailto:elena.matiuk@it-academy.by"} elena.matiuk@it-academy.by
+        %li Skype: elena.matiuk
+      %ul.contact-person
+        %li On groups composition and schedule:
+        %li − Java Developer,
+        %li − English for IT professionals
+        %li
+          %span.contact-info Raisa Atroshchenko,
+          Methodist
+        %li
+          e-mail:
+          %a{href: "mailto:Raisa.Atroshchenko@it-academy.by"} Raisa.Atroshchenko@it-academy.by
+      %ul.contact-person
+        %li On groups composition and schedule:
+        %li − C&plus;&plus; Developer,
+        %li − Software Testing Engineer,
+        %li − ASP.NET Developer
+        %li
+          %span.contact-info Natalia Samurganova,
+          Methodist
+        %li
+          e-mail:
+          %a{href: "mailto:natalia.samurganova@it-academy.by"} natalia.samurganova@it-academy.by
+      %ul.contact-person.last
+        %li Оn groups composition and schedule:
+        %li − Business Analyst,
+        %li − Front-end Developer,
+        %li − PHP Developer,
+        %li − Computer Graphics and Design
+        %li
+          %span.contact-info Natalia Hahanova,
+          Methodist
+        %li
+          e-mail:
+          %a{href: "mailto:natalia.hahanova@it-academy.by"} natalia.hahanova@it-academy.by
+    %aside.wrapper-map
+      .inner-map
+        .map
+          %img{alt: "map", height: "222", src: "/assets/map.jpg", width: "222"}/
+        %ul.address
+          %li Minsk, Masherov Ave, 19, 8th Floor.
+          %li +375 (44) 570-22-22
+          %li +375 (29) 222-24-60
+%footer.wrap
+  .footerWrapper
+    .footerBox
+      %p © 2013, human resource management system
+      %a{href: "/about"} About us
+      %a{href: "/competences"} Our Competences
+      %a.active{href: "/contact"} Contact us
