@@ -47,7 +47,7 @@
                 .form-row
                   .form-cell Page title
                   .form-cell
-                    %input#name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", "data-defaultname" => "PaGe123", maxlength: "50", name: "page[page_title]", type: "text", value: ""}/
+                    %input#name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", maxlength: "50", name: "page[page_title]", type: "text", value: ""}/
                 .form-row
                   .form-cell  
                   #nameValidate.form-cell.error-box
@@ -120,3 +120,4 @@
                   .form-cell
                     %input#publish{name: "page[published]", type: "checkbox", value: "true"}/
                     %label{for: "publish"}
+= render 'pages/footer'
