@@ -12,8 +12,12 @@ describe "index page" do
   it 'should have the edit button' do
     page.should have_selector("button", text: "Edit")
   end
-  it 'should have the edit button' do
-    page.should have_selector("button", text: "Edit")
+  it 'should have the delete button' do
+    page.should have_selector("button", text: "Delete")
+  end
+
+  it 'should have the search input' do
+  	page.should have_selector("input")
   end
 
 
