@@ -1,4 +1,5 @@
 <%= render 'pages/header' %>
+<%= form_for(@page) do |page| %>
   <div class="wrap action">
     <div class="wrap-in">
       <div class="action-bar">
@@ -35,7 +36,6 @@
             <li class="active"><a href="#tab1" data-toggle="tab">Properties</a></li>
             <li><a href="#tab2" data-toggle="tab">Content</a></li>
           </ul>
-          <%= form_for(@page) do |page| %>
             <div class="tab-content">
               <div class="tab-pane active" id="tab1">
                 <div class="form">
