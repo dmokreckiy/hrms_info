@@ -50,6 +50,40 @@ $(document).ready(function () {
         })
     });
 
+<<<<<<< Updated upstream
+=======
+    
+    
+    
+    
+    // --------------------- link ModalWindow begin ---------------------- //
+  var formChanged = false;
+  $(".form > input[type=text], .form > input[type=checkbox], .form > textarea").change(function(){
+      formChanged = true;
+    });
+  $("a").click(function (event) {
+    if(formChanged) {
+        //modal on logo
+        var href = $(this).prop("href");
+        event.preventDefault();
+        redirect = function () {
+            window.location.href = href;
+        };
+
+        $("body").modalWindow({
+            action: "cancel",
+            title: "Redirect",
+            text: "The information is not saved. Are you sure you want to leave the current page?",
+            onAgree: redirect
+        });
+    }
+  });
+    // ----------------------- link ModalWindow end ----------------------- //
+    
+    
+    
+    
+>>>>>>> Stashed changes
     $("#action-save").click(function () {
         $('#name').removeClass('error-validate');
         $('#pageContent').val($('#editor').html());
