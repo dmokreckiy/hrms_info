@@ -18,9 +18,9 @@ class PageGrid
   # Columns
 
   column(:id, header: "", html: true, order: false) do |record|
-    content_tag(:input, content_tag(:input, nil, type: 'checkbox'), {type: 'hidden', name: 'id', value: record.id})
+    tag("input", type: 'checkbox', name: 'id', value: record.id)
   end
-  
+
   column(:page_title, header: "Title")
   column(:published, header: "Published", order: false) do |published_record| 
     published_record.published ? 'true' : 'false'
