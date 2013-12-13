@@ -1,0 +1,12 @@
+<!-- / = form_for grid, options do |f|
+/   - grid.filters.each do |filter|
+/     .filter.filter
+/       = f.datagrid_filter filter
+/        -->
+<%= form_for grid, options do |f| %>
+  <% grid.filters.each do |filter| %>
+    <div class="filter search-query">
+      <input class="filter search-query" id="filter" name="page_grid[page_title]" type="text" placeholder="Search" />
+    </div>
+  <% end %> 
+<% end %>
