@@ -50,15 +50,9 @@ $(document).ready(function () {
         })
     });
 
-<<<<<<< Updated upstream
-=======
-    
-    
-    
-    
     // --------------------- link ModalWindow begin ---------------------- //
   var formChanged = false;
-  $(".form > input[type=text], .form > input[type=checkbox], .form > textarea").change(function(){
+  $(".form input[type=text], .form input[type=checkbox], .form textarea").change(function(){
       formChanged = true;
     });
   $("a").click(function (event) {
@@ -79,11 +73,7 @@ $(document).ready(function () {
     }
   });
     // ----------------------- link ModalWindow end ----------------------- //
-    
-    
-    
-    
->>>>>>> Stashed changes
+
     $("#action-save").click(function () {
         $('#name').removeClass('error-validate');
         $('#pageContent').val($('#editor').html());
