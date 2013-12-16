@@ -10,6 +10,7 @@ AppProject::Application.routes.draw do
    get  'page_grids' => 'pages#index'
    get 'pages/:id/view' => 'pages#show'
 
+  match 'pages//:id/delete' => "pages#destroy", via: :get
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

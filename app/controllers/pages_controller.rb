@@ -25,11 +25,11 @@ class PagesController < ApplicationController
   end
 
   def edit 
-    #@page = Page.find(params[:id])
+   
   end
 
   def update
-    #@page = Page.find(params[:id])
+    
     @page.update_attributes(params[:page])
       if @page.errors.empty?
         flash[:success] = "The #{@page.page_title} has been updated"
@@ -40,13 +40,14 @@ class PagesController < ApplicationController
   end
   
   def show
-    #@page = Page.find(params[:id])
+    
   end
 
-  def destroy 
-    #@page = Page.find(params[:id])
+  def destroy
+    
     @page.destroy
-    redirect_to action: "index"
+    redirect_to pages_path
+    
   end
 
   private
