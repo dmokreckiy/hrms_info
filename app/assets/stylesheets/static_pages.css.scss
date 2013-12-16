@@ -1,11 +1,11 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(/assets/font-awesome.css);
+/*@import url(/assets/font-awesome.css);
 @import url(/assets/attach-constructor.css);
 body {
   background: url(/assets/images/default_page_body.png) repeat top;
-}
+}*/
 html, body {
   height: 100%;
 }
@@ -352,10 +352,11 @@ footer {
   clear: both;
 }
 
-.pagesFunctionality {
- -webkit-box-sizing: content-box;
- -moz-box-sizing: content-box;
- -ms-box-sizing: content-box;
- -o-box-sizing: content-box;
- box-sizing: content-box;
+.pagesFunctionality a,
+.pagesFunctionality img {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+-ms-box-sizing: content-box;
+-o-box-sizing: content-box;
+box-sizing: content-box;
 }
