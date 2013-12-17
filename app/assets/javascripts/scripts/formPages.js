@@ -63,13 +63,9 @@ $(document).ready(function () {
         })
     });
 
-    
-    
-    
-    
     // --------------------- link ModalWindow begin ---------------------- //
   var formChanged = false;
-  $("input[type=text], input[type=checkbox], textarea").change(function(){
+  $(".form input[type=text], .form input[type=checkbox], .form textarea").change(function(){
       formChanged = true;
     });
   $("a").click(function (event) {
@@ -90,10 +86,7 @@ $(document).ready(function () {
     }
   });
     // ----------------------- link ModalWindow end ----------------------- //
-    
-    
-    
-    
+
     $("#action-save").click(function () {
         $('#name').removeClass('error-validate');
         $('#pageContent').val($('#editor').html());
@@ -247,6 +240,6 @@ function showTab() {
     if (pageHash == "#content") {
         $('#pageTabs a[href="#tab2"]').tab('show');
     } else {
-        $('#pageTabs a[href="#tab1"]').tab('show');
+        //$('#pageTabs a[href="#tab1"]').tab('show');
     }
 }

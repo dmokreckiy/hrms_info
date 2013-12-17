@@ -95,3 +95,15 @@ html, body {
   position: relative;
   
 }
+
+@font-face {
+  font-family: 'Awesome';
+  src:url('fontawesome-webfont.eot');
+  src:url('fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fontawesome-webfont.svg#icomoon') format('svg'),
+    url('fontawesome-webfont.woff') format('woff'),
+    url('fontawesome-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
