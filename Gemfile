@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
-gem 'ruby-oci8'
 gem 'activerecord-oracle_enhanced-adapter', git: 'https://github.com/yahonda/oracle-enhanced.git', branch: 'support_schema_creation_rails4'
+gem 'ruby-oci8'
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -15,6 +15,8 @@ gem 'protected_attributes'
 gem 'rspec-rails'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem "datagrid", :git => "git://github.com/bogdan/datagrid.git"
+gem 'kaminari'
 
 group :doc do
   gem 'sdoc', require: false
