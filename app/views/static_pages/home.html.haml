@@ -1,0 +1,100 @@
+%header.pageHeader
+  .loginWrapper
+    .loginContainer
+      %p.welcomText Welcom, Guest
+      .loginLinks
+        %a{href: "#"} Sign Out
+  .headerWrapper
+    %a.noHover{href: "#1"}
+      .logo
+        .logoImg
+          = image_tag("htp_ec_logo.png", :alt => "logo", :width => "115", :height => "93" )
+        %p.logoText hi-Tech park educational center
+    .buttonContainer
+      %a.noHover{href: "/about"}
+        #link1.headerButton
+          %p.buttonText About us
+      %a.noHover{href: "/competences"}
+        .headerButton
+          %p.buttonText Our Competences
+      %a.noHover{href: "/contact"}
+        .headerButton
+          %p.buttonText Contact us
+%section.pagesFunctionality
+  .bodyWrapper
+    #hrmsCarousel.carousel.slide
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#"}
+        %li{"data-slide-to" => "1", "data-target" => "#"}
+        %li{"data-slide-to" => "2", "data-target" => "#"}
+      .carousel-inner
+        .active.item
+          %img{alt: "slideshow", height: "480", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/hrms.jpg", width: "1024"}/
+          .carousel-caption
+            %p.corouselTittle hrms info
+            %p.corouselText
+              The slideshow below shows a generic plugin and component for cycling through elements
+              like a carousel.
+        .item
+          %img{alt: "slideshow", height: "480", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/cat.jpg", width: "1024"}/
+          .carousel-caption
+            %p.corouselTittle hrms cats
+            %p.corouselText
+              The slideshow below shows a generic plugin and component for cycling through elements
+              like a carousel.
+        .item
+          %img{alt: "slideshow", height: "480", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/world.jpg", width: "1024"}/
+          .carousel-caption
+            %p.corouselTittle hrms world
+            %p.corouselText
+              The slideshow below shows a generic plugin and component for cycling through elements
+              like a carousel.
+      %a.carousel-control.left{"data-slide" => "prev", href: "#hrmsCarousel"}
+      %a.carousel-control.right{"data-slide" => "next", href: "#hrmsCarousel"}
+    .searchWrapper
+      .textBox
+        %h1 We have the resources you need
+        %h2 Think about your needs  see your candidates now
+      %form.searchBox
+        %input{name: "s", placeholder: "Search...", type: "search"}
+          .buttonSearch
+            = image_tag("filter_icon_green.png", alt: "search", width: "17", height: "17" )
+    .newsWrapper
+      .newsBox
+        .newsBlock
+          %a.noHover{href: "#4"}
+            .newsTittle
+              %p Professional
+              %h2 research
+            %img{alt: "news", height: "140", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/box01.jpg", width: "330"}/
+          %a{href: "#4"}
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua...
+        .newsBlock.midBlock
+          %a.noHover{href: "#5"}
+            .newsTittle
+              %p Attention
+              %h2 to detail
+            %img{alt: "news", height: "140", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/box02.jpg", width: "330"}/
+          %a{href: "#5"}
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua...
+        .newsBlock
+          %a.noHover{href: "#6"}
+            .newsTittle
+              %p Our
+              %h2 projects
+            %img{alt: "news", height: "140", src: "https://dl.dropboxusercontent.com/u/58416472/lib/img/box03.jpg", width: "330"}/
+          %a{href: "#6"}
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua...
+  %footer.pageFooter
+    .footerWrapper
+      .footerBox
+        %p 2013, human resource management system
+        %a{href: "/about"} About us
+        %a{href: "/competences"} Our Competences
+        %a{href: "/contact"} Contact us

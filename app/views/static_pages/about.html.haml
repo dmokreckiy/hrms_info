@@ -1,0 +1,63 @@
+%header.wrap
+  .loginWrapper
+    .loginContainer
+      %a.welcomText{href: "/pages"} Welcome, Administrator
+      %a.loginLinks{href: "#"} Sign Out
+  .headerWrapper
+    %a.noHover{href: root_path}
+      .logo
+        %img.logoImg{alt: "logo", height: "93", src: "/assets/htp_ec_logo.png", width: "115"}/
+        %p.logoText hi-Tech park educational center
+    .buttonContainer
+      %a.noHover.active{href: "/about"}
+        #link1.headerButton
+          %p.buttonText About us
+      %a.noHover{href: "/competences"}
+        .headerButton
+          %p.buttonText Our Competences
+      %a.noHover{href: "/contact"}
+        .headerButton
+          %p.buttonText Contact us
+%section.wrap.main
+  %h1.about   about us
+  .wrapper
+    .wrapper-about
+      %p
+        Educational Center of High Technologies Park specializes in training of IT sphere beginners for successful career start.
+        Our principles are relevant knowledge and experience in working on real projects via intensive practical programs that
+        were developed according to requirements and under supervision of leading Belarusian IT companies. Our center cooperates
+        with more than 40 IT companies. Today our graduates work for such companies as EPAM Systems, Itransition, Belhard, Exadel,
+        InToSoft, ISSoft, Elilink, etc.
+      %p What needs to be done in order to become professional and highly paid IT specialist?
+      %article
+        %h3 Step one
+        %p
+          Make your choice of educational program (either on your own or with help of our competent employees) and apply
+          for training.
+        %ol
+          %li Software Development
+          %li Software Testing
+          %li Business Courses
+          %li Design and Graphics
+      %h3 Step two
+      %p
+        Study during the course enthusiastically and diligently. That's the way! The demand for IT professionals is very
+        high, and it grows, but only the most hardworking achieve real success.
+      %article
+        %h3 Step three
+        %p
+          We will help you to find a job! We will arrange final projects defence with participation of companies representatives.
+          We will recommend you to the IT companies we cooperate with. We will offer development practice and further grows.
+          Step by step to career heights!
+      %article
+        %p.about-info As a result!
+        %p
+          If you are ready for intensive studying, responsible attitude to project and successful career in IT, then we will
+          be happy to invite you to our educational programs!
+%footer.wrap
+  .footerWrapper
+    .footerBox
+      %p © 2013, human resource management system
+      %a.active{href: "/about"} About us
+      %a{href: "/competences"} Our Competences
+      %a{href: "/contact"} Contact us

@@ -110,7 +110,7 @@
 }
 .sidebar i.sidebar-icon {
   display: inline-block;
-  background: url('/assets/images/sidebar-icon.png');
+  background: url('/assets/sidebar-icon.png');
   height: 14px;
   width: 14px;
   margin: 0 10px 0 10px;
@@ -118,7 +118,7 @@
 
 .sidebar li:hover i.sidebar-icon,
 .sidebar li.active i.sidebar-icon {
-  background: url('/assets/images/sidebar-icon.png') 0 -15px;
+  background: url('/assets/sidebar-icon.png') 0 -15px;
   height: 9px;
 }
 
@@ -600,4 +600,83 @@ table.datagrid  {
 .datagrid .updated_at {
   text-align: left;
   width: 155px;
+}
+
+input[type="checkbox"] {
+  background: url(/assets/checkbox.png) 0 -34px;
+  color: transparent;
+  display: none;
+  content: '.';
+  height: 17px;
+  margin: 0 20px 0 0;
+  width: 17px;
+}
+table .id {
+  width: 37px;
+}
+
+.datagrid tbody td > input[type="checkbox"],
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+/* checkboxes*/
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:disabled + label {
+  cursor: default;
+}
+
+input[type="checkbox"] + label:before {
+  background: url(/assets/checkbox.png) 0 -34px;
+  color: transparent;
+  display: inline-block;
+  content: '.';
+  height: 17px;
+  margin: 0 20px 0 0;
+  width: 17px;
+}
+
+.datagrid tbody td > input[type="checkbox"],
+input[type="checkbox"] + label {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+
+input[type="checkbox"] + label:hover:before {
+  background-position: 0 0;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-position: 0 -51px;
+}
+
+input[type="checkbox"]:checked + label:hover:before {
+  background-position: 0 -17px;
+}
+
+input[type="checkbox"]:disabled + label:before,
+input[type="checkbox"]:disabled + label:hover:before {
+  background-position: 0 -68px;
+}
+
+input[type="checkbox"]:checked:disabled + label:before,
+input[type="checkbox"]:checked:disabled + label:hover:before {
+  background-position: 0 -85px;
 }
