@@ -17,8 +17,6 @@ AppProject::Application.routes.draw do
   get '/competences' => 'static_pages#competences'
   get '/contact' => 'static_pages#contact'
 
-  get 'pages/:id/delete' => "pages#destroy_multiple"
-
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
