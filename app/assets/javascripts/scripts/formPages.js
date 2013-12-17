@@ -36,7 +36,7 @@ $(document).ready(function () {
         $("body").modalWindow({
                         action: "message",
                         title: "Saved",
-                        text: "The page has been saved: ", //+ data.recordName,
+                        text: "The page has been saved: " + $("#name").val(),recordName,
                         onAgree: function () {
                             if (type === "save") {
                                 window.location.href = "/pages";
