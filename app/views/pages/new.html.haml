@@ -48,7 +48,7 @@
                   .form-cell
                     %input#name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", "data-defaultname" => "PaGe123", maxlength: "50", name: "page[page_title]", type: "text", value: ""}/
                 .form-row
-                  .form-cell  
+                  .form-cell  
                   #nameValidate.form-cell.error-box
                     .validLetters{"data-condition" => "^[A-Za-z0-9.,_;:\\ \\-]+$"}
                       Use only English alphabet letters of both cases, digits, punctuation marks like . , : ; - _
@@ -61,7 +61,7 @@
                   .form-cell
                     %input#url{"data-content" => "Use English alphabet\r\n                      letters of lower case, digits, punctuation marks like - _ only. URL must be unique", "data-div" => "urlError", name: "page[page_url]", type: "text", value: ""}/
                 .form-row
-                  .form-cell  
+                  .form-cell  
                   #urlValidate.form-cell.error-box
                     .validLetters{"data-condition" => "^/((\\w|[-])+/?)+$"}
                       Please enter valid data to the URL field
@@ -71,7 +71,7 @@
                   .form-cell
                     %input#keywords{"data-content" => "Use English\r\n                      alphabet letters of lower case, digits, punctuation marks as .- only and separate\r\n                      keywords by commas", name: "page[keywords]", type: "text", value: " "}/
                 .form-row
-                  .form-cell  
+                  .form-cell  
                   #keywordsValidate.form-cell.error-box
                     .validLetters{"data-condition" => "^[a-z0-9.,-]+$"}
                       Use English alphabet letters of lower case, digits, punctuation marks as .
@@ -82,7 +82,7 @@
                   .form-cell
                     %textarea#description{"data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Maximum 200 symbols.", maxlength: "200", name: "page[description]"}
                 .form-row
-                  .form-cell  
+                  .form-cell  
                   #descriptionValidate.form-cell.error-box
                     .validLetters{"data-condition" => "^[A-Za-z0-9.?!,_;:\\ \\-]+$"}
                       Use only English alphabet letters of both cases, digits, punctuation marks like . , : ; - _
@@ -93,7 +93,7 @@
                     .btn-group.bootstrap-select
                       %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
                         %span.filter-option.pull-left> None
-                        \ 
+                        \ 
                         %span.caret
                 .form-row.empty
                 .form-row
@@ -102,7 +102,7 @@
                     .btn-group.bootstrap-select
                       %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
                         %span.filter-option.pull-left> None
-                        \ 
+                        \ 
                         %span.caret
                 .form-row.empty
                 .form-row
@@ -120,3 +120,4 @@
                   .form-cell
                     %input#publish{name: "page[published]", type: "checkbox", value: "true"}/
                     %label{for: "publish"}
+= render 'pages/footer'

@@ -32,6 +32,19 @@ $(document).ready(function () {
 
     $("#action-save").attr("disabled", false);
 
+    $("#action-save").click(function () {
+        $("body").modalWindow({
+                        action: "message",
+                        title: "Saved",
+                        text: "The page has been saved: " + $("#name").val(),recordName,
+                        onAgree: function () {
+                            if (type === "save") {
+                                window.location.href = "/pages";
+                            }
+                        }
+        });
+    });
+    
     $("#action-cancel").click(function () {
         redirect = function () {
             window.location.href = "/pages";
