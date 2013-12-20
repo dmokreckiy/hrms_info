@@ -16,6 +16,8 @@ class PagesController < ApplicationController
     else
       redirect_to new_page_path(@page)
       flash[:failure] = "Page save failed"
+      #полезное сообщение, которое выводит что конкретно не дало сохранить новую страницу
+      #flash[:notice] = @page.errors.full_messages 
     end
   end
 
