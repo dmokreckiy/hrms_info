@@ -117,6 +117,6 @@
                     .form-cell Publish a page
                     .form-cell
                       / %input#page_published{name: "page[published]", type: "checkbox", value: "#{@page.published}"}/
-                      = check_box_tag "publish", value: @page.published
+                      = page.check_box("published", id: "publish")
                       %label{for: "publish"}
 = render 'pages/footer'
