@@ -7,6 +7,6 @@
   %tbody
     - if assets.empty?
       %tr
-        %td.noresults{colspan: "100%"}= I18n.t('datagrid.no_results').html_safe 
+        %td{valign: "top", width: "30%"} No matches found
     - else
       = datagrid_rows(grid, assets, options)
