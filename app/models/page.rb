@@ -40,7 +40,7 @@ class Page < ActiveRecord::Base
 # валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
   validates :page_title, presence: true, format: { with: VALID_NAME_REGEX }, length: { minimum: 3, maximum: 50 }, uniqueness: true
 # валидации на наличие ссылки страницы, соответствии формату 
-  validates :page_url, presence: true, format: { with: VALID_NAME_REGEX }
+  validates :page_url, presence: true, format: { with: VALID_NAME_REGEX }, uniqueness: true
 # валидации на длину описания 
   validates :description, length: { maximum: 200 }
 end
