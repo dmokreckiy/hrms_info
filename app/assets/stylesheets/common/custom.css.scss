@@ -107,3 +107,9 @@ html, body {
   font-style: normal;
 }
 
+::selection {
+  background: #bbb;
+}
+::-moz-selection {
+  background: #bbb;
+}
