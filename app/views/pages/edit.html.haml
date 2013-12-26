@@ -48,7 +48,7 @@
                   .form-row
                     .form-cell Page title
                     .form-cell
-                      %input#name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", "data-defaultname" => "Page01", maxlength: "50", name: "page[page_title]", type: "text", value: @page.page_title}/
+                      %input#page_name{autocomplete: "off", "data-content" => "Use only English alphabet letters of both cases, digits,\r\n                      punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols", "data-defaultname" => "Page01", maxlength: "50", name: "page[page_title]", type: "text", value: @page.page_title}/
                   .form-row
                     .form-cell  
                     #nameValidate.form-cell.error-box
@@ -116,6 +116,7 @@
                   .form-row
                     .form-cell Publish a page
                     .form-cell
-                      = page.check_box(:published)
+                      / %input#page_published{name: "page[published]", type: "checkbox", value: "#{@page.published}"}/
+                      = page.check_box("published", id: "publish")
                       %label{for: "publish"}
 = render 'pages/footer'
