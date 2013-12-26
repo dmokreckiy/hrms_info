@@ -106,17 +106,16 @@
                   .form-row
                     .form-cell Display at top
                     .form-cell
-                      %input#displayTop{name: "properties['show in top menu']", type: "checkbox", value: "true"}/
+                      = page.check_box("display_top_menu", id: "displayTop")
                       %label{for: "displayTop"}
                   .form-row
                     .form-cell Display at bottom
                     .form-cell
-                      %input#displayBottom{name: "properties['show in bottom menu']", type: "checkbox", value: "true"}/
+                      = page.check_box("display_bottom_menu", id: "displayBottom")
                       %label{for: "displayBottom"}
                   .form-row
                     .form-cell Publish a page
                     .form-cell
-                      / %input#page_published{name: "page[published]", type: "checkbox", value: "#{@page.published}"}/
                       = page.check_box("published", id: "publish")
                       %label{for: "publish"}
 = render 'pages/footer'
