@@ -3,14 +3,19 @@ AppProject::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#index'
-   resources :pages 
+  root 'static_pages#home'
+   
+  resources :pages 
 
-   post 'pages/new' => 'pages#create'
-   get  'page_grids' => 'pages#index'
-   get 'pages/:id/view' => 'pages#show'
+  post 'pages/new' => 'pages#create'
+  get  'page_grids' => 'pages#index'
+  get  'pages/:id/view' => 'pages#show'
+  get  'pages/:id/delete' => 'pages#destroy_multiple'
 
-  get "api/competences"
+  #static_pages
+  get '/about' => 'static_pages#about'
+  get '/competences' => 'static_pages#competences'
+  get '/contact' => 'static_pages#contact'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -95,19 +95,19 @@ var datagrid = {
   },
 
       checked : function() {
-        return $('input[type=checkbox]:checked:not(:disabled)').size();
+        return $('input[type=checkbox]:checked').size();
       },
 
       ids: function() {
-        var elem = $('input[type=checkbox]:checked:not(:disabled)').first();
-        return $(elem).prev().val();
+        var elem = $('input[type=checkbox]:checked').first();
+        return $(elem).val();
       },
 
       pagetitle : function() {
         var items = "<ul class='items-list'>", id = [];
-        $('input[type=checkbox]:checked:not(:disabled)').each(function() {
+        $('input[type=checkbox]:checked').each(function() {
           items += "<li>" + $(this).parent().next().text() + "</li>";
-          id.push($(this).prev().val());
+          id.push($(this).val());
         });
         return {
    //       ids : id.toString(),

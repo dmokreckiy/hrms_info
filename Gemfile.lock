@@ -7,8 +7,8 @@ GIT
 
 GIT
   remote: https://github.com/yahonda/oracle-enhanced.git
-  revision: e2fa3151e392d9b5192097e80fdd76a1b77b7162
-  branch: support_schema_creation_rails4
+  revision: a83586caf69cd4fd1e74f02602b79d7829b0bdee
+  branch: rails4
   specs:
     activerecord-oracle_enhanced-adapter (1.4.2)
 

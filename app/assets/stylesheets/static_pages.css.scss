@@ -1,0 +1,362 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*@import url(/assets/font-awesome.css);
+@import url(/assets/attach-constructor.css);
+body {
+  background: url(/assets/images/default_page_body.png) repeat top;
+}*/
+html, body {
+  height: 100%;
+}
+.loginWrapper,
+.searchWrapper {
+  background: none repeat scroll 0 0 #a8a8a8;
+}
+.newsWrapper,
+.fotterWrapper {
+  background: none repeat scroll 0 0 #e6e6e6;
+}
+.loginContainer,
+.headerWrapper,
+.searchWrapper,
+.carousel,
+.newsBox,
+.footerBox,
+h1,
+.wrapper {
+  width: 1024px;
+  margin: 0px auto;
+}
+.loginContainer a,
+.welcomText,
+.newsTittle p,
+.newsTittle h2 {
+  color: white;
+}
+.loginContainer a:hover,
+.footerBox a:hover,
+.footerBox .active {
+  text-decoration: none;
+  color: #4eae3b;
+}
+.loginLinks,
+.buttonContainer,
+.headerButton {
+  float: right;
+}
+.corouselTittle,
+.corouselText,
+.welcomText,
+.loginLinks,
+.headerButton,
+.newsTittle,
+.newsBlock a,
+.footerBox p,
+input[type="search"] {
+  font-family: Tahoma;
+}
+a.noHover {
+  text-decoration: none !important;
+}
+.headerWrapper a,
+.headerWrapper a:hover,
+.newsBlock a,
+.newsBlock a:hover {
+  color: black;
+}
+.mainSerch {
+  font-size: 30px;
+}
+.welcomText,
+.loginLinks {
+  position: absolute;
+  padding-top: 15px;
+}
+.welcomText {
+  padding-left: 20px;
+}
+.loginContainer {
+  height: 50px;
+  position: relative;
+}
+.loginLinks {
+  right: 32px;
+  /*padding-left: 950px;*/
+}
+.headerWrapper {
+  height: 112px;
+  overflow: hidden;
+}
+.logo {
+  width: 100%;
+}
+.logoImg {
+  padding-top: 8px;
+}
+.logoText {
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  bottom: 70px;
+  left: 103px;
+  text-transform: capitalize;
+  width: 15%;
+}
+.buttonContainer {
+  position: relative;
+  height: 100%;
+  width: 672px;
+  bottom: 146px;
+}
+.headerButton {
+  font-size: 24px;
+  text-align: center;
+  width: 33%;
+  height: 100px;
+  border-top: 12px solid #fecc09;
+}
+.headerButton:hover,
+.active .headerButton {
+  border-top: 12px solid #4eae3b;
+}
+.buttonText {
+  padding-top: 36px;
+}
+.bodyWrapper {
+  padding-bottom: 40px;
+}
+.carousel {
+  border-bottom: 3px solid #fecc09;
+  height: 480px;
+}
+.carousel-inner {
+  position: absolute;
+}
+.searchWrapper {
+  height: 210px;
+}
+input[type="search"] {
+  float: left;
+  font-family: Tahoma;
+  border-radius: 12px;
+  text-indent: 6px;
+  width: 300px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+.buttonSearch {
+  margin-left: 2px;
+  padding: 7px 13px 6px 13px;
+  display: inline-block;
+  white-space: nowrap;
+  background-image: -webkit-linear-gradient(to bottom, #fff, #fff);
+  background-image: -moz-linear-gradient(to bottom, #fff, #fff);
+  background-image: linear-gradient(to bottom, #fff, #fff);
+  color: #333;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+.buttonSearch:hover {
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(to bottom, #fafafa, #ddd);
+  background-image: -moz-linear-gradient(to bottom, #fafafa, #ddd);
+  background-image: linear-gradient(to bottom, #fafafa, #ddd);
+}
+.buttonSearch:active {
+  box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+  -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+  -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+  position: relative;
+  top: 1px;
+}
+.searchBox {
+  width: 390px;
+  margin: 0px auto;
+}
+.textBox {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.textBox h2 {
+  padding-top: 10px;
+}
+.textBox h1,
+.textBox h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: 0px auto;
+}
+.newsWrapper {
+  border-top: 1px solid #a8a8a8;
+  height: 470px;
+}
+.newsBlock {
+  position: relative;
+  padding-top: 40px;
+  width: 330px;
+  float: left;
+}
+.midBlock {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.newsTittle {
+  width: 100%;
+  height: 97px;
+  background: #a8a8a8;
+  border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  border-bottom: 3px solid #fecc09;
+}
+.newsTittle p,
+.newsTittle h2 {
+  padding-left: 30px;
+}
+.newsTittle p {
+  padding-top: 22px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.newsTittle h2 {
+  position: relative;
+  bottom: 10px;
+  text-transform: uppercase;
+}
+.newsBlock > a > p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 2;
+}
+.corouselTittle {
+  font-size: 30px;
+  padding-bottom: 18px;
+  text-transform: uppercase;
+}
+.corouselText {
+  font-size: 20px;
+}
+.footerWrapper {
+  border-top: 6px solid #a8a8a8;
+  height: 90px;
+}
+.footerBox {
+  padding-top: 35px;
+}
+.footerBox p {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.footerBox a {
+  float: right;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 24px;
+  color: black;
+  
+}
+
+/*---------------*/
+
+.wrap {
+    min-width: 1024px;
+    width: 100%;
+}
+.main {
+  height: auto !important;
+  min-height: 100%;
+  position: relative;
+}
+.wrapper {
+  height: 100%;
+  position: relative;
+}
+.wrapper p,
+.wrapper-competences > .attach-list {
+  margin: 12px 0;
+}
+h1.contact,
+h1.about {
+  background-color: #4EAE3B;
+  border-bottom: 9px solid #a8a8a8;
+  font-size: 32px;
+  color: #fff;
+  padding: 6px 0;
+  text-transform: uppercase;
+}
+.wrapper-contact {
+  float: left;
+  height: 100%;
+  margin: 32px 0 12px 20px;
+  position: relative;
+  width: 60%;
+}
+.wrapper-about,
+.wrapper-competences {
+  padding: 32px 0 12px 20px;
+  position: relative;
+}
+.searchWrapperCompetences {
+  position: relative;
+  width: 100%;
+}
+#searchBoxCompetences {
+  float: right;
+}
+#searchBoxCompetences > input[type="search"] {
+  width: 206px;
+}
+.wrapper-about h3 {
+  font-size: 24px;
+}
+.wrapper-about article {
+  padding-top: 6px;
+}
+.wrapper-map {
+  float: right;
+  height: 100%;
+  margin: 44px 10% 0 0;
+  position: relative;
+  width: 222px;
+}
+.wrapper-contact > ul ,
+.inner-map > ul {
+    list-style: none outside none;
+    margin: 12px 0;
+}
+ul.address li {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+}
+.contact-info,
+.about-info {
+  font-weight: bold;
+}
+.contact-person > li:first-child {
+  font-style: italic;
+}
+.contact-person > li > a{
+  color: #2D821E;
+  text-decoration: underline;
+}
+ul.last {
+  padding-bottom: 23px;
+}
+footer {
+  clear: both;
+}
+
+.pagesFunctionality a,
+.pagesFunctionality img {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+-ms-box-sizing: content-box;
+-o-box-sizing: content-box;
+box-sizing: content-box;
+}
