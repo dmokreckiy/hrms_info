@@ -115,10 +115,7 @@
                     <div class="form-cell">Parent page</div>
                     <div class="form-cell">
                       <div class="btn-group bootstrap-select">
-                        <button data-toggle="dropdown" class="btn dropdown-toggle" type="button" data-id="page-type">
-                          <span class="filter-option pull-left">None</span>&nbsp;
-                          <span class="caret"></span>
-                        </button>
+                        <%= collection_select(:page, "parent_page_id", Page.all, :id, :page_title, {:prompt => true}) %>
                       </div>
                     </div>
                   </div>

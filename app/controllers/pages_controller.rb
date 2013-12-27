@@ -10,6 +10,8 @@ class PagesController < ApplicationController
   
 
   def create
+    @page = Page.new(params[:page])
+    @page.parent_id = Page.find_by(@page.parent_page_id)
     @page = Page.create(params[:page])
     if @page.errors.empty? 
       redirect_to pages_path
