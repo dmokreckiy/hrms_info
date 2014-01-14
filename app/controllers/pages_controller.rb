@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     @page.save
     if @page.errors.empty? 
       redirect_to pages_path
+      flash[:'save-name'] = @page.page_title
     else
       redirect_to new_page_path(@page)
       flash[:failure] = "Page save failed"
