@@ -11,6 +11,10 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.create(params[:page])
+    @page.display_top_menu = false if @page.display_top_menu.nil?
+    @page.display_bottom_menu = false if @page.display_bottom_menu.nil?
+    @page.published = false if @page.published.nil?
+    @page.save
     if @page.errors.empty? 
       redirect_to pages_path
     else
