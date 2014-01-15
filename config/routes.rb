@@ -1,5 +1,5 @@
 AppProject::Application.routes.draw do
-    # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -19,6 +19,7 @@ AppProject::Application.routes.draw do
   get '/about' => 'static_pages#about'
   get '/competences' => 'static_pages#competences'
   get '/contact' => 'static_pages#contact'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
