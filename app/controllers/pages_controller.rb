@@ -20,9 +20,13 @@ class PagesController < ApplicationController
       flash[:'save-name'] = @page.page_title
     else
       redirect_to new_page_path(@page)
-      flash[:failure] = "Page save failed"
-      #полезное сообщение, которое выводит что конкретно не дало сохранить новую страницу
-      flash[:notice] = @page.errors.full_messages 
+      #flash[:failure] = "Page save failed"
+      if @page.errors.full_messages.include? "Page title has already been taken"
+        flash[:'unique-name'] = @page.page_title
+      end
+      if @page.errors.full_messages.include? "Page url has already been taken"
+        flash[:'unique-url'] = @page.page_title
+      end
     end
   end
 
