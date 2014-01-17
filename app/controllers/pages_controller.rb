@@ -10,13 +10,7 @@ class PagesController < ApplicationController
   
 
   def create
-    @page = Page.new(params[:page])
-    @page.parent_id = Page.find_by(@page.parent_page_id)
     @page = Page.create(params[:page])
-    @page.display_top_menu = false if @page.display_top_menu.nil?
-    @page.display_bottom_menu = false if @page.display_bottom_menu.nil?
-    @page.published = false if @page.published.nil?
-    @page.save
     if @page.errors.empty? 
       redirect_to pages_path
     else
@@ -36,7 +30,6 @@ class PagesController < ApplicationController
   end
 
   def update
-    
     @page.update_attributes(params[:page])
       if @page.errors.empty?
         redirect_to pages_path
