@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  # before_filter :find_page, only: [:show, :edit, :update, :destroy_multiple]
+  before_filter :find_page, only: [:show, :edit, :update]
 
   def index
     @page_grid = PageGrid.new(params[:page_grid])
@@ -50,13 +50,13 @@ class PagesController < ApplicationController
   end
 
 
-  # private
+  private
 
-  #   def find_page
-  #     begin
-  #       @page = Page.find(params[:id])
-  #     rescue ActiveRecord::RecordNotFound => e
-  #       render "/public/404", status: 404
-  #     end
-  #   end
+    def find_page
+      begin
+        @page = Page.find(params[:id])
+      rescue ActiveRecord::RecordNotFound => e
+        render "/public/404", status: 404
+      end
+    end
 end
