@@ -11,16 +11,11 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.create(params[:page])
-    @page.display_top_menu = false if @page.display_top_menu.nil?
-    @page.display_bottom_menu = false if @page.display_bottom_menu.nil?
-    @page.published = false if @page.published.nil?
-    @page.save
     if @page.errors.empty? 
       redirect_to pages_path
       flash[:'save-name'] = @page.page_title
     else
       redirect_to new_page_path(@page)
-      #flash[:failure] = "Page save failed"
       if @page.errors.full_messages.include? "Page title has already been taken"
         flash[:'unique-name'] = @page.page_title
       end
@@ -43,8 +38,15 @@ class PagesController < ApplicationController
     @page.update_attributes(params[:page])
       if @page.errors.empty?
         redirect_to pages_path
+        flash[:'save-name'] = @page.page_title
       else
         render 'edit'
+        # if @page.errors.full_messages.include? "Page title has already been taken"
+        #   flash.now[:'unique-name'] = @page.page_title
+        # end
+        # if @page.errors.full_messages.include? "Page url has already been taken"
+        #   flash.now[:'unique-url'] = @page.page_title
+        # end
       end
   end
   
