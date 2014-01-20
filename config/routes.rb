@@ -5,7 +5,7 @@ AppProject::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
    
-  resources :pages 
+  resources :pages
 
   post 'pages/new' => 'pages#create'
   get  'page_grids' => 'pages#index'
