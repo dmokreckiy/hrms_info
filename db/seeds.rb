@@ -8,10 +8,18 @@
 100.times do 
   p = Page.new
   p.page_title = Faker::Name.first_name + " "  + Faker::Name.last_name
-  p.page_url = "/page/#{rand(1000)}"
+  if Page.last.nil?
+  	p.page_url = "/pages/1"
+  else
+  	p.page_url = "/pages/#{Page.last.id+1}"
+  end
   p.keywords = "keywords"
   p.description = "descriprion"
-  p.parent_page_id = 'None'
-  p.page_type = 'None'
+  p.content = nil
+  p.parent_page_id = nil
+  p.page_type = nil
+  p.display_top_menu = false
+  p.display_bottom_menu = false
+  p.published = [true, false].sample
   p.save!
 end
