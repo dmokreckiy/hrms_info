@@ -3,32 +3,33 @@
 # Table name: pages
 #
 #  id                  :integer          not null, primary key
-#  page_title          :string(255)      название страницы
-#  page_url            :string(255)      url страницы
-#  keywords            :text             ключевые слова HTML метаданных
-#  description         :string(255)      описание страницы HTML метаданных
-#  content             :text             содержание
-#  parent_page_id      :integer          id родительской страницы
-#  page_type           :integer          тип страницы
-#  display_top_menu    :boolean          признак отображения в верхнем меню
-#  display_bottom_menu :boolean          признак отображения в нижнем меню
-#  published           :boolean          признак публикации страницы
-#  created_at          :datetime         дата создания
-#  updated_at          :datetime         дата обновления
-#  ancestry            :string(255)      родительская цепочка отношений страниц
+#  page_title          :string(255)      page title
+#  page_url            :string(255)      page url
+#  keywords            :text             keywords for HTML metadata
+#  description         :string(255)      description for HTML metadata
+#  content             :text             page content
+#  parent_page_id      :integer          parent page id (for view and reference)
+#  page_type           :integer          page type id (view types)
+#  display_top_menu    :boolean          display at top propetry
+#  display_bottom_menu :boolean          display at bottom property
+#  published           :boolean          publish property
+#  created_at          :datetime         self explanatory
+#  updated_at          :datetime         self explanatory
+#  ancestry            :string(255)      Ancestry string for tree structure (Parent Page function)
 #
 
 class Page < ActiveRecord::Base
+#  RegEx for page title and page url validation
   VALID_NAME_REGEX = /\A[a-zA-Z0-9+\'\"\.\,\:\;\-\s]*[a-zA-Z\s][a-zA-Z0-9+\'\"\.\,\:\;\-\s]*\z/
   VALID_URL_REGEX = /\A[a-zA-Z0-9+\'\"\.\,\:\;\-\/\s]*[a-zA-Z\s][a-zA-Z0-9+\'\"\.\,\:\;\-\/\s]*\z/
   attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
-# чистка пробелов(в начале, в конце, несколько пробелов подряд в середине), переводов строки и табуляции
+# whitespace cleaning
   before_save do
     self.page_title.squish!
     self.description.squish! unless self.description.blank?
   end
 
-# вставка значений по умолчанию в поля page_title и page_url пустые в форме
+# default value insertion for page title and page url (mandatory fields)
   before_validation do
     if Page.last.nil?
       @page_def_num = 1
@@ -39,14 +40,10 @@ class Page < ActiveRecord::Base
     self.page_url = "/page#{@page_def_num+1}" if self.page_url.blank?
   end
   
-# валидации на наличие заголовка страницы, соответствии формату и требованиям по размеру (мин 3, макс 50)
+# validations for page title
   validates :page_title, presence: true, format: { with: VALID_NAME_REGEX }, length: { minimum: 3, maximum: 50 }, uniqueness: true
-# валидации на наличие ссылки страницы, соответствии формату 
+# validations for page url
   validates :page_url, presence: true, format: { with: VALID_URL_REGEX }, uniqueness: true
-# валидации на длину описания 
+# validations for description 
   validates :description, length: { maximum: 200 }
 end
-
-
-
-
