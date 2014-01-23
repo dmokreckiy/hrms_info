@@ -19,7 +19,9 @@
 #
 
 class Page < ActiveRecord::Base
-#  RegEx for page title and page url validation
+    has_ancestry
+
+#  RegEx for page title and page url validation  
   VALID_NAME_REGEX = /\A[a-zA-Z0-9+\'\"\.\,\:\;\-\s]*[a-zA-Z\s][a-zA-Z0-9+\'\"\.\,\:\;\-\s]*\z/
   VALID_URL_REGEX = /\A[a-zA-Z0-9+\'\"\.\,\:\;\-\/\s]*[a-zA-Z\s][a-zA-Z0-9+\'\"\.\,\:\;\-\/\s]*\z/
   attr_accessible :page_title, :page_url, :keywords, :description, :content, :parent_page_id, :page_type, :display_top_menu, :display_bottom_menu, :published
@@ -27,6 +29,16 @@ class Page < ActiveRecord::Base
   before_save do
     self.page_title.squish!
     self.description.squish! unless self.description.blank?
+    self.display_top_menu = false if self.display_top_menu.nil?
+    self.display_bottom_menu = false if self.display_bottom_menu.nil?
+    self.published = false if self.published.nil?
+    unless self.parent_page_id.blank?
+      if self.id.nil?
+          self.parent_id = Page.find(self.parent_page_id) 
+      else
+        self.parent_id = Page.find(self.parent_page_id) unless self.parent_page_id == Page.find(self.id).parent_page_id            
+      end
+    end
   end
 
 # default value insertion for page title and page url (mandatory fields)
@@ -47,3 +59,7 @@ class Page < ActiveRecord::Base
 # validations for description 
   validates :description, length: { maximum: 200 }
 end
+
+
+
+

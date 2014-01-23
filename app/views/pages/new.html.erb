@@ -4,10 +4,10 @@
     <div class="wrap-in">
       <div class="action-bar">
         <div class="action-buttons">
-          <button id="action-apply" class="btn btn-success" name="apply">Apply</button>
-          <button id="action-view" class="btn btn-success" name="view">View</button>
-          <button id="action-save" class="btn btn-success" name="save">Save</button>
-          <button id="action-cancel" class="btn btn-success" name="cancel">Cancel</button>
+          <button id="action-apply" class="btn btn-success" type ="submit" name="apply">Apply</button>
+          <button id="action-view" class="btn btn-success" type="button" name="view">View</button>
+          <button id="action-save" class="btn btn-success" type="submit" name="save">Save</button>
+          <button id="action-cancel" class="btn btn-success" type="button" name="cancel">Cancel</button>
         </div>
       </div>
     </div>
@@ -42,8 +42,7 @@
                   <div class="form-row">
                     <div class="form-cell">Page title</div>
                     <div class="form-cell">
-                      <input id="name" name="page[page_title]" data-defaultName="Page01"
-                      data-content="Use only English alphabet letters of both cases, digits,
+                      <input id="name" name="page[page_title]" data-content="Use only English alphabet letters of both cases, digits,
                       punctuation marks like . , : ; - _. Minimum 3 and maximum 50 symbols" 
                       type="text" value="" maxlength="50" autocomplete="off"/>
                     </div>
@@ -82,7 +81,7 @@
                     <div class="form-cell">
                       <input id="keywords" name="page[keywords]" data-content="Use English
                       alphabet letters of lower case, digits, punctuation marks as .- only and separate
-                      keywords by commas" type="text" value=" "/>
+                      keywords by commas" type="text" value=""/>
                     </div>
                   </div>
                   <div class="form-row">
@@ -115,10 +114,7 @@
                     <div class="form-cell">Parent page</div>
                     <div class="form-cell">
                       <div class="btn-group bootstrap-select">
-                        <button data-toggle="dropdown" class="btn dropdown-toggle" type="button" data-id="page-type">
-                          <span class="filter-option pull-left">None</span>&nbsp;
-                          <span class="caret"></span>
-                        </button>
+                        <%= collection_select(:page, "parent_page_id", Page.all, :id, :page_title, {:prompt => true}) %>
                       </div>
                     </div>
                   </div>
@@ -136,16 +132,16 @@
                   </div>
                   <div class="form-row empty"></div>
                   <div class="form-row">
-                    <div class="form-cell">Display at top</div>
+                    <div class="form-cell">Display at top menu</div>
                     <div class="form-cell">
-                      <input type="checkbox" value="true" name="properties['show in top menu']" id="displayTop">
+                      <input type="checkbox" value="true" name="page[display_top_menu]" id="displayTop">
                       <label for="displayTop"></label>
                     </div>
                   </div>
                   <div class="form-row">
-                    <div class="form-cell">Display at bottom</div>
+                    <div class="form-cell">Display at bottom menu</div>
                     <div class="form-cell">
-                      <input type="checkbox" value="true" name="properties['show in bottom menu']" id="displayBottom">
+                      <input type="checkbox" value="true" name="page[display_bottom_menu]" id="displayBottom">
                       <label for="displayBottom"></label>
                     </div>
                   </div>

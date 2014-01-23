@@ -14,6 +14,6 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
-      add_index :pages, :page_title
+      add_index :pages, :page_title, unique: true
   end
 end

@@ -91,7 +91,7 @@
                   .form-cell Parent page
                   .form-cell
                     .btn-group.bootstrap-select
-                      %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
+                      %button.btn.dropdown-toggle{"data-id" => "parent-id", "data-toggle" => "dropdown", type: "button"}
                         %span.filter-option.pull-left> None
                         \ 
                         %span.caret
@@ -106,12 +106,12 @@
                         %span.caret
                 .form-row.empty
                 .form-row
-                  .form-cell Display at top
+                  .form-cell Display at top menu
                   .form-cell
                     %input#displayTop{name: "properties['show in top menu']", type: "checkbox", value: "true"}/
                     %label{for: "displayTop"}
                 .form-row
-                  .form-cell Display at bottom
+                  .form-cell Display at bottom menu
                   .form-cell
                     %input#displayBottom{name: "properties['show in bottom menu']", type: "checkbox", value: "true"}/
                     %label{for: "displayBottom"}
