@@ -17,6 +17,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem "datagrid", :git => "git://github.com/bogdan/datagrid.git"
 gem 'kaminari'
+gem 'ancestry'
 
 group :doc do
   gem 'sdoc', require: false

@@ -34,7 +34,6 @@ class PagesController < ApplicationController
   end
 
   def update
-    
     @page.update_attributes(params[:page])
       if @page.errors.empty?
         redirect_to pages_path

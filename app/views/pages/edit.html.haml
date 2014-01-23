@@ -89,10 +89,7 @@
                     .form-cell Parent page
                     .form-cell
                       .btn-group.bootstrap-select
-                        %button.btn.dropdown-toggle{"data-id" => "page-type", "data-toggle" => "dropdown", type: "button"}
-                          %span.filter-option.pull-left> None
-                          \ 
-                          %span.caret
+                        = collection_select(:page, "parent_page_id", Page.all, :id, :page_title, {:prompt => true})
                   .form-row.empty
                   .form-row
                     .form-cell Page type
