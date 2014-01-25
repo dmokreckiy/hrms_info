@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :find_page, only: [:show, :edit, :update, :destroy_multiple]
+  before_filter :find_page, only: [:show, :edit, :update]
 
   def index
     @page_grid = PageGrid.new(params[:page_grid])
@@ -54,7 +54,8 @@ class PagesController < ApplicationController
   end
 
   def destroy_multiple
-     @page.destroy
+    ids = params[:id].split("-")
+    Page.where(:id => ids).destroy_all
     redirect_to pages_path
   end
 

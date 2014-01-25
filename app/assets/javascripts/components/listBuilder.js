@@ -46,7 +46,7 @@ var datagrid = {
           title : "Delete pages",
           text : "Are you sure you want to delete the following "+ (length > 1 ? "pages?" : "page?") + pt.items + "",
           onAgree : function() {
-            var ref = window.location.pathname + "/" + datagrid.ids() + '/delete';
+            var ref = window.location.pathname + "/" + pt.ids + '/delete';
             window.location.href = ref;
             // $(".footer").before("<form id='deletePages' name='deletePages' method='POST' action='/pages/delete' style='visibility:hidden'><input type='text' id='ids' name='ids' value='"+ pt.ids +"' /><button type='submit' name='form_datagrid' id='form_datagrid' value=''></button></form>");
             // $("#deletePages").submit();
@@ -72,7 +72,7 @@ var datagrid = {
       id.push($(this).val());
     });
     return {
-     //ids : id.toString(),
+      ids : id.join("-"),
       items : items + "</ul>"
     };
   }
