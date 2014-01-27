@@ -19,7 +19,11 @@
 #
 
 class Page < ActiveRecord::Base
-    has_ancestry
+  has_ancestry
+  
+  def apply_orphan_strategy
+    # Destruction will be handled separately
+  end
 
 #  RegEx for page title and page url validation  
   VALID_NAME_REGEX = /\A[a-zA-Z0-9+\'\"\.\,\:\;\-\s]*[a-zA-Z\s][a-zA-Z0-9+\'\"\.\,\:\;\-\s]*\z/
@@ -34,7 +38,7 @@ class Page < ActiveRecord::Base
     self.published = false if self.published.nil?
     unless self.parent_page_id.blank?
       if self.id.nil?
-          self.parent_id = Page.find(self.parent_page_id) 
+        self.parent_id = Page.find(self.parent_page_id) 
       else
         self.parent_id = Page.find(self.parent_page_id) unless self.parent_page_id == Page.find(self.id).parent_page_id            
       end
@@ -44,12 +48,19 @@ class Page < ActiveRecord::Base
 # default value insertion for page title and page url (mandatory fields)
   before_validation do
     if Page.last.nil?
-      @page_def_num = 1
+      @page_def_num = 0
     else
       @page_def_num = Page.last.id
     end
     self.page_title = "Page#{@page_def_num+1}" if self.page_title.blank?
     self.page_url = "/page#{@page_def_num+1}" if self.page_url.blank?
+  end
+
+  before_destroy do
+    unless self.is_childless?
+      errors.add(:base, "Cannot delete page with childrens") 
+      false
+    end
   end
   
 # validations for page title
@@ -59,7 +70,3 @@ class Page < ActiveRecord::Base
 # validations for description 
   validates :description, length: { maximum: 200 }
 end
-
-
-
-
