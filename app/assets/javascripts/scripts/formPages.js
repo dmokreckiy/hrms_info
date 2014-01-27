@@ -28,7 +28,7 @@ $(document).ready(function () {
     initPopover("#keywords");
 
     $('.selectpicker').selectpicker();
-    $('#action-apply, #action-save').on('mousedown', insertDefaults);
+    $('#action-save').on('mousedown', insertDefaults);
 
     $("#action-save").attr("disabled", false);
 
@@ -125,12 +125,12 @@ $(document).ready(function () {
       //addPage(sendData, 'save');
     });
 
-    $("#action-apply").click(function () {
+    /*$("#action-apply").click(function () {
         $('#name').removeClass('error-validate');
         $('#pageContent').val($('#editor').html());
         var sendData = $("#edit-properties").serialize();
         addPage(sendData, 'apply');
-    });
+    });*/
 
 
     $("#action-view").click(function () {
@@ -196,33 +196,33 @@ function activateValidate() {
         trimString("#name");
         returnName = validate("#name");
         if (returnName && returnDesc && returnURL && returnKeywords) {
-            $("#action-save, #action-apply").attr("disabled", false);
+            $("#action-save").attr("disabled", false);
         } else {
-            $("#action-save, #action-apply").attr("disabled", true);
+            $("#action-save").attr("disabled", true);
         }
     });
     $("#description").blur(function () {
         returnDesc = validate("#description");
         if (returnName && returnDesc && returnURL && returnKeywords) {
-            $("#action-save, #action-apply").attr("disabled", false);
+            $("#action-save").attr("disabled", false);
         } else {
-            $("#action-save, #action-apply").attr("disabled", true);
+            $("#action-save").attr("disabled", true);
         }
     });
     $("#url").blur(function () {
         returnURL = validate("#url");
         if (returnName && returnDesc && returnURL && returnKeywords) {
-            $("#action-save, #action-apply").attr("disabled", false);
+            $("#action-save").attr("disabled", false);
         } else {
-            $("#action-save, #action-apply").attr("disabled", true);
+            $("#action-save").attr("disabled", true);
         }
     });
     $("#keywords").blur(function () {
         returnKeywords = validate("#keywords");
         if (returnName && returnDesc && returnURL && returnKeywords) {
-            $("#action-save, #action-apply").attr("disabled", false);
+            $("#action-save").attr("disabled", false);
         } else {
-            $("#action-save, #action-apply").attr("disabled", true);
+            $("#action-save").attr("disabled", true);
         }
     });
 }
