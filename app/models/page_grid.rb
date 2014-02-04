@@ -12,7 +12,7 @@ class PageGrid
   filter(:page_title, :string) do |value, scope|
     #scope.where("page_title like '%#{value.downcase}%'")
     #oracle case insensitive search
-    scope.where("page_title LIKE INITCAP('%?%')", value)
+    scope.where("Initcap(page_title) like Initcap(?)", '%' + value.to_s + '%')
   end
 
   # Columns
